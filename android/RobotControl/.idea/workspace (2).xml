@@ -1,0 +1,1245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config>
+        <device id="_device_class_phone" />
+        <device id="_device_class_tablet" />
+        <device id="_device_class_foldable" />
+        <device id="wearos_small_round" />
+        <device id="pixel_4a" />
+        <device id="pixel" />
+        <device id="pixel_2" />
+        <option name="nonWearDeviceLastStateName" value="portrait" />
+        <target>android-29</target>
+      </config>
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="Service" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="df3de9ba-b39e-4ef1-ba1f-bf25a2b566c4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/customers/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/androidTest/java/com/med/customers/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/java/com/med/customers/presentation/CustomersMainViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/java/com/med/customers/presentation/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/java/com/med/customers/presentation/MainViewModelFactory.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/java/com/med/customers/presentation/fragments/ClientFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/java/com/med/customers/presentation/fragments/ConfirmSelectionFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/java/com/med/customers/presentation/fragments/LoginFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/java/com/med/customers/presentation/fragments/OrderStatusFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/java/com/med/customers/presentation/fragments/SettingsFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/java/com/med/customers/presentation/fragments/TaskListFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/java/com/med/customers/presentation/fragments/data/OrderCallback.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/java/com/med/customers/presentation/fragments/data/OrderStatusCallback.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/java/com/med/customers/presentation/fragments/data/OrderStatusRecyclerViewAdapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/java/com/med/customers/presentation/fragments/data/OrdersRecyclerViewAdapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/color/bnv_tab_item_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/drawable-v24/mind.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/drawable/ic_add.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/drawable/ic_check.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/drawable/ic_error.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/drawable/ic_fingerprint.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/drawable/ic_list.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/drawable/ic_medical_services.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/drawable/ic_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/drawable/ic_uncheck.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/drawable/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/drawable/logo_mobi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/drawable/mind.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/layout/challenge_item.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/layout/content_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/layout/fragment_chalenge.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/layout/fragment_client.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/layout/fragment_confirm_selection.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/layout/fragment_login.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/layout/fragment_order_status.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/layout/fragment_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/layout/fragment_task_list.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/layout/status_item.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/menu/bottom_menu.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-anydpi-v26/ic_launcher_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-anydpi-v26/ic_launcher_2_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-anydpi-v26/ic_launcher_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-anydpi-v26/ic_launcher_3_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-anydpi-v26/ic_mind.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-anydpi-v26/ic_mind_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-hdpi/ic_launcher_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-hdpi/ic_launcher_2_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-hdpi/ic_launcher_2_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-hdpi/ic_launcher_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-hdpi/ic_launcher_3_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-hdpi/ic_launcher_3_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-hdpi/ic_mind.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-hdpi/ic_mind_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-hdpi/ic_mind_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-mdpi/ic_launcher_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-mdpi/ic_launcher_2_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-mdpi/ic_launcher_2_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-mdpi/ic_launcher_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-mdpi/ic_launcher_3_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-mdpi/ic_launcher_3_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-mdpi/ic_mind.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-mdpi/ic_mind_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-mdpi/ic_mind_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-xhdpi/ic_launcher_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-xhdpi/ic_launcher_2_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-xhdpi/ic_launcher_2_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-xhdpi/ic_launcher_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-xhdpi/ic_launcher_3_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-xhdpi/ic_launcher_3_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-xhdpi/ic_mind.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-xhdpi/ic_mind_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-xhdpi/ic_mind_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-xxhdpi/ic_launcher_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-xxhdpi/ic_launcher_2_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-xxhdpi/ic_launcher_2_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-xxhdpi/ic_launcher_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-xxhdpi/ic_launcher_3_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-xxhdpi/ic_launcher_3_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-xxhdpi/ic_mind.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-xxhdpi/ic_mind_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-xxhdpi/ic_mind_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-xxxhdpi/ic_launcher_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-xxxhdpi/ic_launcher_2_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-xxxhdpi/ic_launcher_2_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-xxxhdpi/ic_launcher_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-xxxhdpi/ic_launcher_3_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-xxxhdpi/ic_launcher_3_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-xxxhdpi/ic_mind.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-xxxhdpi/ic_mind_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/mipmap-xxxhdpi/ic_mind_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/navigation/nav_graph.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/values-night/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/values/dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customers/src/test/java/com/med/customers/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/java/com/example/mqttkotlinsample/data/ChallengeHandler.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/java/com/example/mqttkotlinsample/data/Result.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/java/com/example/mqttkotlinsample/data/model/LoggedInUser.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/java/com/example/mqttkotlinsample/presentation/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/java/com/example/mqttkotlinsample/presentation/MainViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/java/com/example/mqttkotlinsample/presentation/MainViewModelFactory.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/java/com/example/mqttkotlinsample/presentation/fragments/ClientFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/java/com/example/mqttkotlinsample/presentation/fragments/ConfirmSelectionFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/java/com/example/mqttkotlinsample/presentation/fragments/LoginFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/java/com/example/mqttkotlinsample/presentation/fragments/SettingsFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/java/com/example/mqttkotlinsample/presentation/fragments/TaskListFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/java/com/example/mqttkotlinsample/presentation/fragments/data/ChallengeCallback.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/java/com/example/mqttkotlinsample/presentation/fragments/data/ChallengeRecyclerViewAdapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/color/bnv_tab_item_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/drawable/ic_add.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/drawable/ic_check.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/drawable/ic_error.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/drawable/ic_fingerprint.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/drawable/ic_list.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/drawable/ic_medical_services.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/drawable/ic_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/drawable/ic_uncheck.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/drawable/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/drawable/logo_mobi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/drawable/mind.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/layout/challenge_item.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/layout/content_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/layout/fragment_chalenge.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/layout/fragment_client.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/layout/fragment_confirm_selection.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/layout/fragment_login.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/layout/fragment_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/layout/fragment_task_list.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/menu/bottom_menu.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/menu/menu_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-anydpi-v26/ic_launcher_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-anydpi-v26/ic_launcher_2_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-anydpi-v26/ic_launcher_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-anydpi-v26/ic_launcher_3_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-anydpi-v26/ic_mind.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-anydpi-v26/ic_mind_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-hdpi/ic_launcher_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-hdpi/ic_launcher_2_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-hdpi/ic_launcher_2_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-hdpi/ic_launcher_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-hdpi/ic_launcher_3_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-hdpi/ic_launcher_3_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-hdpi/ic_mind.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-hdpi/ic_mind_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-hdpi/ic_mind_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-mdpi/ic_launcher_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-mdpi/ic_launcher_2_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-mdpi/ic_launcher_2_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-mdpi/ic_launcher_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-mdpi/ic_launcher_3_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-mdpi/ic_launcher_3_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-mdpi/ic_mind.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-mdpi/ic_mind_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-mdpi/ic_mind_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-xhdpi/ic_launcher_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-xhdpi/ic_launcher_2_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-xhdpi/ic_launcher_2_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-xhdpi/ic_launcher_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-xhdpi/ic_launcher_3_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-xhdpi/ic_launcher_3_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-xhdpi/ic_mind.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-xhdpi/ic_mind_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-xhdpi/ic_mind_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-xxhdpi/ic_launcher_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-xxhdpi/ic_launcher_2_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-xxhdpi/ic_launcher_2_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-xxhdpi/ic_launcher_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-xxhdpi/ic_launcher_3_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-xxhdpi/ic_launcher_3_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-xxhdpi/ic_mind.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-xxhdpi/ic_mind_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-xxhdpi/ic_mind_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-xxxhdpi/ic_launcher_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-xxxhdpi/ic_launcher_2_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-xxxhdpi/ic_launcher_2_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-xxxhdpi/ic_launcher_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-xxxhdpi/ic_launcher_3_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-xxxhdpi/ic_launcher_3_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-xxxhdpi/ic_mind.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-xxxhdpi/ic_mind_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/mipmap-xxxhdpi/ic_mind_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/navigation/nav_graph.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/values-night/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/values/arrays.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/values/attrs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/values/dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewaysopener/src/main/res/xml/root_preferences.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/androidTest/java/com/med/provisor/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/ic_mind-playstore.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/java/com/med/provisor/presentation/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/java/com/med/provisor/presentation/MainViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/java/com/med/provisor/presentation/MainViewModelFactory.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/java/com/med/provisor/presentation/fragments/LoginFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/java/com/med/provisor/presentation/fragments/OrderInfoFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/java/com/med/provisor/presentation/fragments/OrdersFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/java/com/med/provisor/presentation/fragments/SettingsFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/java/com/med/provisor/presentation/fragments/TaskListFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/java/com/med/provisor/presentation/fragments/data/OrderInfoCallback.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/java/com/med/provisor/presentation/fragments/data/OrderInfoRecyclerViewAdapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/java/com/med/provisor/presentation/fragments/data/OrderListCallback.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/java/com/med/provisor/presentation/fragments/data/OrderListRecyclerViewAdapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/color/bnv_tab_item_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/drawable/ic_add.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/drawable/ic_check.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/drawable/ic_error.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/drawable/ic_fingerprint.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/drawable/ic_list.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/drawable/ic_medical_services.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/drawable/ic_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/drawable/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/drawable/logo_mobi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/drawable/mind.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/layout/content_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/layout/fragment_chalenge.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/layout/fragment_login.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/layout/fragment_order_info.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/layout/fragment_orders.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/layout/fragment_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/layout/fragment_task_list.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/layout/order_info_item.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/layout/order_item.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/menu/bottom_menu.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/menu/menu_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-anydpi-v26/ic_launcher_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-anydpi-v26/ic_launcher_2_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-anydpi-v26/ic_launcher_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-anydpi-v26/ic_launcher_3_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-anydpi-v26/ic_mind.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-anydpi-v26/ic_mind_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-hdpi/ic_launcher_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-hdpi/ic_launcher_2_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-hdpi/ic_launcher_2_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-hdpi/ic_launcher_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-hdpi/ic_launcher_3_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-hdpi/ic_launcher_3_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-hdpi/ic_mind.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-hdpi/ic_mind_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-hdpi/ic_mind_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-mdpi/ic_launcher_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-mdpi/ic_launcher_2_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-mdpi/ic_launcher_2_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-mdpi/ic_launcher_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-mdpi/ic_launcher_3_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-mdpi/ic_launcher_3_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-mdpi/ic_mind.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-mdpi/ic_mind_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-mdpi/ic_mind_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-xhdpi/ic_launcher_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-xhdpi/ic_launcher_2_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-xhdpi/ic_launcher_2_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-xhdpi/ic_launcher_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-xhdpi/ic_launcher_3_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-xhdpi/ic_launcher_3_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-xhdpi/ic_mind.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-xhdpi/ic_mind_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-xhdpi/ic_mind_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-xxhdpi/ic_launcher_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-xxhdpi/ic_launcher_2_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-xxhdpi/ic_launcher_2_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-xxhdpi/ic_launcher_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-xxhdpi/ic_launcher_3_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-xxhdpi/ic_launcher_3_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-xxhdpi/ic_mind.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-xxhdpi/ic_mind_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-xxhdpi/ic_mind_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-xxxhdpi/ic_launcher_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-xxxhdpi/ic_launcher_2_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-xxxhdpi/ic_launcher_2_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-xxxhdpi/ic_launcher_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-xxxhdpi/ic_launcher_3_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-xxxhdpi/ic_launcher_3_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-xxxhdpi/ic_mind.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-xxxhdpi/ic_mind_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/mipmap-xxxhdpi/ic_mind_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/navigation/nav_graph.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/values-night/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/values/arrays.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/values/attrs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/values/dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/values/ic_mind_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provisor/src/test/java/com/med/provisor/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wearhelpbutton/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wearhelpbutton/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wearhelpbutton/src/debug/ic_logo-playstore.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wearhelpbutton/src/debug/res/drawable/ic_logo_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wearhelpbutton/src/debug/res/mipmap-anydpi-v26/ic_logo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wearhelpbutton/src/debug/res/mipmap-anydpi-v26/ic_logo_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wearhelpbutton/src/debug/res/mipmap-hdpi/ic_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wearhelpbutton/src/debug/res/mipmap-hdpi/ic_logo_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wearhelpbutton/src/debug/res/mipmap-mdpi/ic_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wearhelpbutton/src/debug/res/mipmap-mdpi/ic_logo_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wearhelpbutton/src/debug/res/mipmap-xhdpi/ic_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wearhelpbutton/src/debug/res/mipmap-xhdpi/ic_logo_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wearhelpbutton/src/debug/res/mipmap-xxhdpi/ic_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wearhelpbutton/src/debug/res/mipmap-xxhdpi/ic_logo_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wearhelpbutton/src/debug/res/mipmap-xxxhdpi/ic_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wearhelpbutton/src/debug/res/mipmap-xxxhdpi/ic_logo_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wearhelpbutton/src/debug/res/values/ic_logo_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wearhelpbutton/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wearhelpbutton/src/main/java/com/wear/helpbutton/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wearhelpbutton/src/main/res/drawable/roundedbutton.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wearhelpbutton/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wearhelpbutton/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wearhelpbutton/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wearhelpbutton/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wearhelpbutton/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wearhelpbutton/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wearhelpbutton/src/main/res/values-round/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wearhelpbutton/src/main/res/values/dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wearhelpbutton/src/main/res/values/strings.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\murad\.android\avd\Pixel_3a_API_33_x86_64.avd]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="HospitalAndroidApps" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+        <option value="layoutResourceFile" />
+        <option value="resourceFile" />
+        <option value="Kotlin Data Class" />
+        <option value="Class" />
+        <option value="Kotlin Interface" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="KEY_STORE_PATH" value="D:\CLOUD\WORKSPACE\HospitalProject\Android\KEYS\Key_QS.jks" />
+    <option name="KEY_ALIAS" value="key0" />
+    <option name="REMEMBER_PASSWORDS" value="true" />
+    <option name="BUILD_TARGET_KEY" value="apk" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="2" />
+  </component>
+  <component name="ProjectId" id="1rXfGIrf9aE55taWyCbwyXRKi18" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ApkExportedModule" value="HospitalAndroidApps.wearhelpbutton" />
+    <property name="ExportApk.ApkPath" value="D:\CLOUD\WORKSPACE\HospitalProject\Android\APKs" />
+    <property name="ExportApk.BuildVariants" value="release" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="ToolWindowEmulator.ShowToolbar" value="false" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="com.android.tools.idea.emulator.zoom.toolbar.visible" value="false" />
+    <property name="com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable" value="ALL" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../KEYS/Key_QS.jks" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.DirectoryMappings" />
+  </component>
+  <component name="PsdUISettings">
+    <option name="MODULE_TAB" value="Default Config" />
+    <option name="LAST_EDITED_SIGNING_CONFIG" value="debug" />
+    <option name="LAST_EDITED_BUILD_TYPE" value="release" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\CLOUD\WORKSPACE\HospitalProject\Android\Pharmacist\customers\src\main\res" />
+      <recent name="D:\CLOUD\WORKSPACE\HospitalProject\Android\Pharmacist\customers\src\main\res\layout" />
+      <recent name="D:\CLOUD\WORKSPACE\HospitalProject\Android\Pharmacist\customers\src\main\java\com\med\customers\presentation\fragments" />
+      <recent name="D:\CLOUD\WORKSPACE\HospitalProject\Android\Pharmacist\customers\src\main\res\navigation" />
+      <recent name="D:\CLOUD\WORKSPACE\HospitalProject\Android\Pharmacist\customers\src\main\res\values" />
+    </key>
+    <key name="android.template.-449494638">
+      <recent name="com.example.mqttkotlinsample.fragments" />
+      <recent name="com.example.mqttkotlinsample" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\CLOUD\WORKSPACE\HospitalProject\Android\Pharmacist\wearhelpbutton\src\main\res\drawable" />
+      <recent name="D:\GoogleDisk\WORKSPACE\HospitalProject\Android\LiftOpener\app\src\main\res\drawable" />
+    </key>
+    <key name="android.template.-2104759486">
+      <recent name="com.example.mqttkotlinsample.fragments" />
+      <recent name="com.example.mqttkotlinsample" />
+    </key>
+    <key name="android.template.-851506818">
+      <recent name="com.example.mqttkotlinsample.fragments" />
+      <recent name="com.example.mqttkotlinsample" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.med.data.storage.func" />
+      <recent name="com.med.data.storage.model" />
+      <recent name="com.med.data.storage.implementation" />
+      <recent name="com.med.customers.presentation" />
+      <recent name="com.med.data.storage" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.mqttkotlinsample" />
+    </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.med.customers.presentation.fragments" />
+      <recent name="com.med.customers.presentation" />
+      <recent name="com.med.gatewayopener.presentation.fragments" />
+    </key>
+    <key name="android.template.-1744492273">
+      <recent name="com.example.mqttkotlinsample.fragments" />
+      <recent name="com.example.mqttkotlinsample" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Android App.app_provisor">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="HospitalAndroidApps.app.main" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+        <option name="PROFILING_MODE" value="NOT_SET" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app_customers" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="HospitalAndroidApps.app_customers.main" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+        <option name="PROFILING_MODE" value="NOT_SET" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app_gatewaysopener" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="HospitalAndroidApps.app_gatewaysopener.main" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+        <option name="PROFILING_MODE" value="NOT_SET" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app_provisor" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="HospitalAndroidApps.app_provisor.main" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+        <option name="PROFILING_MODE" value="NOT_SET" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app_wearhelpbutton" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="HospitalAndroidApps.app_wearhelpbutton.main" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+        <option name="PROFILING_MODE" value="NOT_SET" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="customers" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="HospitalAndroidApps.customers.main" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+        <option name="PROFILING_MODE" value="NOT_SET" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gatewayopener" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="MQTTkotlinsample.gatewayopener" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+        <option name="PROFILING_MODE" value="NOT_SET" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gatewaysopener" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="HospitalAndroidApps.gatewaysopener.main" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+        <option name="PROFILING_MODE" value="NOT_SET" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="provisor" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="HospitalAndroidApps.provisor.main" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+        <option name="PROFILING_MODE" value="NOT_SET" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="wearhelpbutton" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="HospitalAndroidApps.wearhelpbutton.main" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+        <option name="PROFILING_MODE" value="NOT_SET" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="wearhelper" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="HospitalAndroidApps.wearhelper.main" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="do_nothing" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+        <option name="PROFILING_MODE" value="NOT_SET" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="df3de9ba-b39e-4ef1-ba1f-bf25a2b566c4" name="Default Changelist" comment="" />
+      <created>1619127257590</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1619127257590</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/MqttExample/ui/fragments/LoginFragment.kt</url>
+          <line>143</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/MqttExample/ui/fragments/OrderInfoFragment.kt</url>
+          <line>37</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/MqttExample/data/mqtt/MQTTClient.kt</url>
+          <line>95</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app_provisor/src/main/java/com/med/provisor/presentation/fragments/LoginFragment.kt</url>
+          <line>45</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app_wearhelpbutton/src/main/java/com/wear/helpbutton/MainActivity.kt</url>
+          <line>19</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app_wearhelpbutton/src/main/java/com/wear/helpbutton/MainActivity.kt</url>
+          <line>17</line>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

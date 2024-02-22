@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="1.7">
+      <module name="android.RobotControl.services" target="11" />
+      <module name="HospitalAndroidApps.app" target="11" />
+      <module name="HospitalAndroidApps.app_biomaterialcollector" target="11" />
+      <module name="HospitalAndroidApps.app_biomaterialrequester" target="11" />
+      <module name="HospitalAndroidApps.app_customers" target="11" />
+      <module name="HospitalAndroidApps.app_gatewaysopener" target="11" />
+      <module name="HospitalAndroidApps.app_provisor" target="11" />
+      <module name="HospitalAndroidApps.app_wearhelpbutton" target="11" />
+      <module name="HospitalAndroidApps.biometric" target="11" />
+      <module name="HospitalAndroidApps.data" target="11" />
+      <module name="HospitalAndroidApps.robotcontrol" target="11" />
+      <module name="HospitalAndroidApps.services" target="11" />
+      <module name="MQTTkotlinsample.app" target="11" />
+      <module name="MQTTkotlinsample.biometric" target="11" />
+      <module name="MQTTkotlinsample.data" target="11" />
+      <module name="MQTTkotlinsample.gatewayopener" target="11" />
+      <module name="MQTTkotlinsample.gatewaysopener" target="11" />
+      <module name="MQTTkotlinsample.provisor" target="11" />
+      <module name="MQTTkotlinsample.services" target="11" />
+      <module name="Pharmacist.HospitalAndroidApps.app" target="11" />
+      <module name="Pharmacist.HospitalAndroidApps.app_biomaterialcollector" target="11" />
+      <module name="Pharmacist.HospitalAndroidApps.app_biomaterialrequester" target="11" />
+      <module name="Pharmacist.HospitalAndroidApps.app_customers" target="11" />
+      <module name="Pharmacist.HospitalAndroidApps.app_gatewaysopener" target="11" />
+      <module name="Pharmacist.HospitalAndroidApps.app_provisor" target="11" />
+      <module name="Pharmacist.HospitalAndroidApps.app_wearhelpbutton" target="11" />
+      <module name="Pharmacist.HospitalAndroidApps.biometric" target="11" />
+      <module name="Pharmacist.HospitalAndroidApps.data" target="11" />
+      <module name="Pharmacist.HospitalAndroidApps.robotcontrol" target="11" />
+      <module name="Pharmacist.HospitalAndroidApps.services" target="11" />
+      <module name="RobotControl.data" target="11" />
+      <module name="RobotControl.HospitalAndroidApps.biometric" target="11" />
+      <module name="RobotControl.HospitalAndroidApps.data" target="11" />
+      <module name="RobotControl.HospitalAndroidApps.robotcontrol" target="11" />
+      <module name="RobotControl.HospitalAndroidApps.services" target="11" />
+      <module name="RobotControl.robotcontrol" target="11" />
+      <module name="RobotControl.services" target="11" />
+      <module name="StudiesRobot.HospitalAndroidApps.data" target="11" />
+      <module name="StudiesRobot.HospitalAndroidApps.robotcontrol" target="11" />
+      <module name="StudiesRobot.HospitalAndroidApps.services" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

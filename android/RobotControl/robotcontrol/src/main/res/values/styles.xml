@@ -1,0 +1,55 @@
+<resources>
+
+    <style name="Widget.Theme.Provisor.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">#F2FFFFFF</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+
+
+    <style name="Button.Red" parent="">
+        <item name="android:backgroundTint">@color/colorRedButton</item>
+        <item name="android:textSize">16sp</item>
+
+    </style>
+
+    <style name="Button.Primary" parent="">
+        <item name="android:backgroundTint">@color/colorPrimary</item>
+        <item name="android:fontFamily">casual</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="SeekBar.join" parent="">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:layout_width">315dp</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:progressBackgroundTint">@color/colorSecondaryVariant</item>
+        <item name="android:thumbTint">@color/purple_500</item>
+    </style>
+
+    <style name="TextView.HeaderTitle" parent="">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">24dp</item>
+    </style>
+
+    <style name="TextView.sbText" parent="">
+        <item name="android:textColor">@color/colorPrimary</item>
+<!--        <item name="android:fontFamily">casual</item>-->
+        <item name="android:textSize">17dp</item>
+<!--        <item name="android:textStyle">bold</item>-->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextView.SettingsText" parent="">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textSize">19dp</item>
+    </style>
+
+    <style name="TextView.ItemInfo" parent="">
+        <item name="android:textColor">@color/colorTextInfo</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+</resources>

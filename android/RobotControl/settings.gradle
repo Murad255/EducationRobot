@@ -1,0 +1,5 @@
+rootProject.name = "RobotControl"
+include ':data'
+include ':domain'
+include ':services'
+include ':robotcontrol'

@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config>
+        <device id="_device_class_phone" />
+        <device id="wearos_small_round" />
+        <device id="_device_class_tablet" />
+        <device id="_device_class_foldable" />
+        <device id="pixel_4a" />
+        <device id="pixel" />
+        <device id="pixel_2" />
+        <target>android-29</target>
+      </config>
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="df3de9ba-b39e-4ef1-ba1f-bf25a2b566c4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/src/main/java/com/med/services/Notification.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/src/main/java/com/med/services/Notification.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DOCKER/DB/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DOCKER/DB/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../HospitalBPMN/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/controllers/src/main/java/com/HospitalBPMN/controllers/FileMappedController/BiomaterialsDeliveryFileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HospitalBPMN/controllers/src/main/java/com/HospitalBPMN/controllers/FileMappedController/BiomaterialsDeliveryFileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/controllers/target/classes/com/HospitalBPMN/controllers/FileMappedController/BiomaterialsDeliveryFileHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../HospitalBPMN/controllers/target/classes/com/HospitalBPMN/controllers/FileMappedController/BiomaterialsDeliveryFileHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/data/src/main/java/com/HospitalBPMN/data/repo/StartDataRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HospitalBPMN/data/src/main/java/com/HospitalBPMN/data/repo/StartDataRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/data/target/classes/com/HospitalBPMN/data/dto/DtoFactoryRepo (2).class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/data/target/classes/com/HospitalBPMN/data/dto/factory/OneC_OrderDtoFactory (2).class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/data/target/classes/com/HospitalBPMN/data/dto/factory/OneC_OrderDtoFactory$1 (2).class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/data/target/classes/com/HospitalBPMN/data/repo/StartDataRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../HospitalBPMN/data/target/classes/com/HospitalBPMN/data/repo/StartDataRepo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/data/target/classes/com/HospitalBPMN/data/services/WidthPathTraceService (2).class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/data/target/classes/com/HospitalBPMN/data/useCase/CreateUserSimpleJobUseCase (2).class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/data/target/classes/com/HospitalBPMN/data/useCase/OpenGatewayUseCase (2).class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/domain/src/main/java/com/HospitalBPMN/domain/model/bace/Executor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HospitalBPMN/domain/src/main/java/com/HospitalBPMN/domain/model/bace/Executor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/domain/src/main/java/com/HospitalBPMN/domain/model/entitiesProperty/AdditionalTransferStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HospitalBPMN/domain/src/main/java/com/HospitalBPMN/domain/model/entitiesProperty/AdditionalTransferStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/domain/src/main/java/com/HospitalBPMN/domain/model/entity/BoxSwapDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HospitalBPMN/domain/src/main/java/com/HospitalBPMN/domain/model/entity/BoxSwapDevice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/domain/src/main/java/com/HospitalBPMN/domain/model/entity/Delivery.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HospitalBPMN/domain/src/main/java/com/HospitalBPMN/domain/model/entity/Delivery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/domain/src/main/java/com/HospitalBPMN/domain/model/entity/SlotItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HospitalBPMN/domain/src/main/java/com/HospitalBPMN/domain/model/entity/SlotItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/domain/src/main/java/com/HospitalBPMN/domain/model/entity/TransferInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HospitalBPMN/domain/src/main/java/com/HospitalBPMN/domain/model/entity/TransferInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/domain/src/main/java/com/HospitalBPMN/domain/model/entity/UserJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HospitalBPMN/domain/src/main/java/com/HospitalBPMN/domain/model/entity/UserJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/domain/src/main/java/com/HospitalBPMN/domain/modelRepo/SlotPositionRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/domain/target/classes/com/HospitalBPMN/domain/model/bace/Executor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../HospitalBPMN/domain/target/classes/com/HospitalBPMN/domain/model/bace/Executor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/domain/target/classes/com/HospitalBPMN/domain/model/entitiesProperty/AdditionalTransferStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../HospitalBPMN/domain/target/classes/com/HospitalBPMN/domain/model/entitiesProperty/AdditionalTransferStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/domain/target/classes/com/HospitalBPMN/domain/model/entity/BoxSwapDevice.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../HospitalBPMN/domain/target/classes/com/HospitalBPMN/domain/model/entity/BoxSwapDevice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/domain/target/classes/com/HospitalBPMN/domain/model/entity/Delivery$DeliveryBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../HospitalBPMN/domain/target/classes/com/HospitalBPMN/domain/model/entity/Delivery$DeliveryBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/domain/target/classes/com/HospitalBPMN/domain/model/entity/Delivery.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../HospitalBPMN/domain/target/classes/com/HospitalBPMN/domain/model/entity/Delivery.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/domain/target/classes/com/HospitalBPMN/domain/model/entity/Order$OrderBuilder (2).class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/domain/target/classes/com/HospitalBPMN/domain/model/entity/ProcessData (2).class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/domain/target/classes/com/HospitalBPMN/domain/model/entity/ProcessData$ProcessDataBuilder (2).class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/domain/target/classes/com/HospitalBPMN/domain/model/entity/UserJob.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../HospitalBPMN/domain/target/classes/com/HospitalBPMN/domain/model/entity/UserJob.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/domain/target/classes/com/HospitalBPMN/domain/notations/CallServicePerson (2).class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/domain/target/classes/com/HospitalBPMN/domain/notations/ConfirmOrderTest (2).class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/domain/target/classes/com/HospitalBPMN/domain/notations/DoorOpen (2).class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/domain/target/classes/com/HospitalBPMN/domain/notations/GenerateTestData (2).class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/domain/target/classes/com/HospitalBPMN/domain/notations/GenerateTestData (3).class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/domain/target/classes/com/HospitalBPMN/domain/notations/MoveInLift (2).class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/domain/target/classes/com/HospitalBPMN/domain/notations/MoveOutLift (2).class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/domain/target/classes/com/HospitalBPMN/domain/notations/PathTrace (2).class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/domain/target/classes/com/HospitalBPMN/domain/notations/PathTrace$1 (2).class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/domain/target/classes/com/HospitalBPMN/domain/notations/ServicePersonalDelivering (2).class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/domain/target/classes/com/HospitalBPMN/domain/notations/SetNextPoint (2).class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/domain/target/classes/com/HospitalBPMN/domain/notations/TestCallDelivery (2).class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/domain/target/classes/com/HospitalBPMN/domain/notations/TestNotation (2).class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/domain/target/classes/com/HospitalBPMN/domain/useCase/ICallServicePerson.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/domain/target/classes/com/HospitalBPMN/domain/useCase/IDToRepo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/domain/target/classes/com/HospitalBPMN/domain/useCase/IPathTraceService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/domain/target/classes/com/HospitalBPMN/domain/useCase/IUserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HospitalBPMN/logs/spring-boot-logger.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../HospitalBPMN/logs/spring-boot-logger.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Документы/OMRON покрытие.docx" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[2A121FDH2008PU]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/app">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="HospitalAndroidApps" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="HospitalAndroidApps" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="HospitalAndroidApps" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="HospitalAndroidApps" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Data Class" />
+        <option value="resourceFile" />
+        <option value="Kotlin File" />
+        <option value="Kotlin Interface" />
+        <option value="Kotlin Enum" />
+        <option value="layoutResourceFile" />
+        <option value="Class" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="KEY_STORE_PATH" value="D:\CLOUD\WORKSPACE\HospitalProject\Android\KEYS\Key_QS.jks" />
+    <option name="KEY_ALIAS" value="key0" />
+    <option name="REMEMBER_PASSWORDS" value="true" />
+    <option name="BUILD_TARGET_KEY" value="apk" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="1rXfGIrf9aE55taWyCbwyXRKi18" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ApkExportedModule": "Pharmacist.HospitalAndroidApps.robotcontrol",
+    "ExportApk.ApkPathForHospitalAndroidApps.app": "D:\\CLOUD\\WORKSPACE\\HospitalProject\\Android\\Pharmacist\\app",
+    "ExportApk.ApkPathForHospitalAndroidApps.app_biomaterialcollector": "D:\\CLOUD\\WORKSPACE\\HospitalProject\\Android\\APKs",
+    "ExportApk.ApkPathForHospitalAndroidApps.app_biomaterialrequester": "D:\\CLOUD\\WORKSPACE\\HospitalProject\\Android\\APKs\\debug\\req",
+    "ExportApk.ApkPathForHospitalAndroidApps.app_gatewaysopener": "D:\\CLOUD\\WORKSPACE\\HospitalProject\\Android\\APKs",
+    "ExportApk.ApkPathForHospitalAndroidApps.robotcontrol": "D:\\CLOUD\\WORKSPACE\\HospitalProject\\Android\\Pharmacist\\robotcontrol",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "android-custom-viewC:/Users/murad/.gradle/caches/modules-2/files-2.1/com.jakchang.vertical_seekbar/vertical-seekbar/1.0.1/c772990fe2219d83fa9090d896f69e3abff5a809/vertical-seekbar-1.0.1-sources.jar!/com/jakchang/vertical_seekbar/VerticalSeekBar.kt_SELECTED": "VerticalSeekBar",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "G:/CLOUD/WORKSPACE/HospitalProject/Android/Pharmacist/services/src/main/res/drawable",
+    "memory.settings.postsync.last.time.stamp": "1704970054662",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "configurable.group.build",
+    "settings.editor.splitter.proportion": "0.34725052"
+  },
+  "keyToStringList": {
+    "ExportApk.BuildVariants": [
+      "debug"
+    ]
+  }
+}]]></component>
+  <component name="PsdUISettings">
+    <option name="MODULES_LIST_MINIMIZE" value="true" />
+    <option name="MODULE_TAB" value="Default Config" />
+    <option name="LAST_EDITED_SIGNING_CONFIG" value="debug" />
+    <option name="LAST_EDITED_BUILD_TYPE" value="release" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\CLOUD\WORKSPACE\HospitalProject\Android\Pharmacist\services\src\main\res\drawable" />
+      <recent name="D:\CLOUD\WORKSPACE\HospitalProject\Android\Pharmacist\services\src\main\java\com\med\services" />
+      <recent name="D:\CLOUD\WORKSPACE\HospitalProject\Android\Pharmacist\app\src\main\res\values" />
+      <recent name="D:\CLOUD\WORKSPACE\HospitalProject\Android\Pharmacist\app\src\main\res\navigation" />
+      <recent name="D:\CLOUD\WORKSPACE\HospitalProject\Android\Pharmacist\app\src\main\res\layout" />
+    </key>
+    <key name="android.template.-449494638">
+      <recent name="com.example.mqttkotlinsample.fragments" />
+      <recent name="com.example.mqttkotlinsample" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\CLOUD\WORKSPACE\HospitalProject\Android\Pharmacist\biometric\src\main\res\values-ko" />
+      <recent name="D:\CLOUD\WORKSPACE\HospitalProject\Android\Pharmacist\wearhelpbutton\src\main\res\drawable" />
+      <recent name="D:\GoogleDisk\WORKSPACE\HospitalProject\Android\LiftOpener\app\src\main\res\drawable" />
+    </key>
+    <key name="android.template.-2104759486">
+      <recent name="com.example.mqttkotlinsample.fragments" />
+      <recent name="com.example.mqttkotlinsample" />
+    </key>
+    <key name="android.template.-851506818">
+      <recent name="com.example.mqttkotlinsample.fragments" />
+      <recent name="com.example.mqttkotlinsample" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.med.domain.models" />
+      <recent name="com.hospitalUser.presentation.fragments.data.job" />
+      <recent name="com.med.biomaterialcollector.presentation.fragments" />
+      <recent name="com.med.biomaterialrequester.presentation" />
+      <recent name="com.med.biomaterialcollector.presentation" />
+    </key>
+    <key name="android.template.70706131">
+      <recent name="com.biometric" />
+    </key>
+    <key name="android.template.1670412892">
+      <recent name="com.hospitalUser" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.mqttkotlinsample" />
+    </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.hospitalUser.presentation.fragments.data.proces" />
+      <recent name="com.hospitalUser.presentation.fragments" />
+      <recent name="com.med.robotcontrol" />
+      <recent name="com.hospitalUser.presentation" />
+      <recent name="com.med.biomaterialcollector.presentation.fragments" />
+    </key>
+    <key name="android.template.-1744492273">
+      <recent name="com.example.mqttkotlinsample.fragments" />
+      <recent name="com.example.mqttkotlinsample" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Android App.Pharmacist.HospitalAndroidApps.app">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Pharmacist.HospitalAndroidApps.app" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="Pharmacist.HospitalAndroidApps.app.main" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Pharmacist.HospitalAndroidApps.app_wearhelpbutton" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="Pharmacist.HospitalAndroidApps.app_wearhelpbutton.main" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Pharmacist.HospitalAndroidApps.robotcontrol" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="Pharmacist.HospitalAndroidApps.robotcontrol.main" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="Pharmacist.HospitalAndroidApps.app.main~1" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app_wearhelpbutton" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="Pharmacist.HospitalAndroidApps.app_wearhelpbutton.main~1" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="robotcontrol" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="Pharmacist.HospitalAndroidApps.robotcontrol.main~1" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Android App.Pharmacist.HospitalAndroidApps.app" />
+      <item itemvalue="Android App.Pharmacist.HospitalAndroidApps.app_wearhelpbutton" />
+      <item itemvalue="Android App.Pharmacist.HospitalAndroidApps.robotcontrol" />
+      <item itemvalue="Android App.app" />
+      <item itemvalue="Android App.app_wearhelpbutton" />
+      <item itemvalue="Android App.robotcontrol" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="df3de9ba-b39e-4ef1-ba1f-bf25a2b566c4" name="Default Changelist" comment="" />
+      <created>1619127257590</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1619127257590</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/MqttExample/ui/fragments/LoginFragment.kt</url>
+          <line>143</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/MqttExample/ui/fragments/OrderInfoFragment.kt</url>
+          <line>37</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/MqttExample/data/mqtt/MQTTClient.kt</url>
+          <line>95</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/data/src/main/java/com/med/data/storage/mqtt/MQTTClient.kt</url>
+          <line>400</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/data/src/main/java/com/med/data/storage/mqtt/MQTTClient.kt</url>
+          <line>419</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app_biomaterialrequester/src/main/java/com/med/biomaterialrequester/presentation/MainActivity.kt</url>
+          <line>22</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app_biomaterialrequester/src/main/java/com/med/biomaterialrequester/presentation/MainActivity.kt</url>
+          <line>20</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app_biomaterialrequester/src/main/java/com/med/biomaterialrequester/presentation/MainActivity.kt</url>
+          <line>23</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/data/src/main/java/com/med/data/repository/ChallengeRepositoryImpl.kt</url>
+          <line>37</line>
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/data/src/main/java/com/med/data/storage/mqtt/MQTTClient.kt</url>
+          <line>274</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app_wearhelpbutton/src/main/java/com/wear/helpbutton/MainActivity.kt</url>
+          <line>43</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app_wearhelpbutton/src/main/java/com/wear/helpbutton/MainActivity.kt</url>
+          <line>39</line>
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

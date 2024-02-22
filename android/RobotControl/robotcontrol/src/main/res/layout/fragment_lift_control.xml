@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    tools:context=".LiftControlFragment">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.med.robotcontrol.MainViewModel" />
+        <variable
+            name="ordersFragment"
+            type="com.med.robotcontrol.LiftControlFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/bt_stop3"
+            android:layout_width="120dp"
+            android:layout_height="43dp"
+            android:onClick="@{viewModel::set}"
+            android:text="set"
+            app:layout_constraintBottom_toTopOf="@+id/tv_status"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/bt_stop4"
+            android:layout_width="93dp"
+            android:layout_height="42dp"
+            android:onClick="@{viewModel::save}"
+            android:text="save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/bt_start"
+            app:layout_constraintVertical_bias="0.03" />
+
+        <Button
+            android:id="@+id/bt_stop6"
+            android:layout_width="93dp"
+            android:layout_height="42dp"
+            android:onClick="@{viewModel::clear}"
+            android:text="clear"
+            app:layout_constraintBottom_toBottomOf="@+id/bt_stop4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bt_stop4"
+            app:layout_constraintVertical_bias="0.43" />
+
+        <Button
+            android:id="@+id/bt_stop7"
+            android:layout_width="93dp"
+            android:layout_height="42dp"
+            android:onClick="@{viewModel::back}"
+            android:text="back"
+            app:layout_constraintBottom_toBottomOf="@+id/bt_stop6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.847"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
+            app:layout_constraintTop_toTopOf="@+id/bt_stop6"
+            app:layout_constraintVertical_bias="0.43" />
+
+        <Button
+            android:id="@+id/bt_stop"
+            style="@style/Button.Red"
+            android:layout_width="160dp"
+            android:layout_height="63dp"
+            android:onClick="@{viewModel::stop}"
+            android:text="stop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.133" />
+
+        <Button
+            android:id="@+id/bt_stop2"
+            android:layout_width="120dp"
+            android:layout_height="43dp"
+            android:onClick="@{viewModel::reset}"
+            android:text="reset"
+            app:layout_constraintBottom_toBottomOf="@+id/bt_stop3"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout2"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bt_stop3"
+            app:layout_constraintVertical_bias="0.937" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="188dp"
+            android:layout_height="21dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.972" />
+
+        <Button
+            android:id="@+id/bt_start"
+            android:layout_width="100dp"
+            android:layout_height="63dp"
+            android:onClick="@{viewModel::start}"
+            android:text="start"
+            app:layout_constraintBottom_toBottomOf="@+id/bt_stop"
+            app:layout_constraintHorizontal_bias="0.405"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+            app:layout_constraintTop_toTopOf="@+id/bt_stop"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="325dp"
+            android:layout_height="67dp"
+            android:layout_marginBottom="244dp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_status"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bt_stop4"
+            app:layout_constraintVertical_bias="0.415">
+
+
+            <TextView
+                style="@style/TextView.sbText"
+                android:text="J1"
+                app:layout_constraintBottom_toTopOf="@+id/sb_join1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                style="@style/TextView.sbText"
+                android:text="100"
+                app:layout_constraintBottom_toTopOf="@+id/sb_join1"
+                app:layout_constraintEnd_toEndOf="@+id/sb_join1" />
+
+            <TextView
+                style="@style/TextView.sbText"
+                android:text="0"
+                app:layout_constraintBottom_toTopOf="@+id/sb_join1"
+                app:layout_constraintStart_toStartOf="@+id/sb_join1" />
+
+            <SeekBar
+                android:id="@+id/sb_join1"
+                style="@style/SeekBar.join"
+                android:onSeekBarChangeListener="@{viewModel.seekBarListener}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="325dp"
+            android:layout_height="67dp"
+            android:layout_marginBottom="140dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+            <TextView
+                style="@style/TextView.sbText"
+                android:text="J2"
+                app:layout_constraintBottom_toTopOf="@+id/sb_join2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                style="@style/TextView.sbText"
+                android:text="100"
+                app:layout_constraintBottom_toTopOf="@+id/sb_join2"
+                app:layout_constraintEnd_toEndOf="@+id/sb_join2" />
+
+            <TextView
+                style="@style/TextView.sbText"
+                android:text="0"
+                app:layout_constraintBottom_toTopOf="@+id/sb_join2"
+                app:layout_constraintStart_toStartOf="@+id/sb_join2" />
+
+            <SeekBar
+                android:id="@+id/sb_join2"
+                style="@style/SeekBar.join"
+                android:onSeekBarChangeListener="@{viewModel.seekBarListener}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout4"
+            android:layout_width="325dp"
+            android:layout_height="67dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
+            app:layout_constraintVertical_bias="0.13">
+            <TextView
+                style="@style/TextView.sbText"
+                android:text="J3"
+                app:layout_constraintBottom_toTopOf="@+id/sb_join3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                style="@style/TextView.sbText"
+                android:text="100"
+                app:layout_constraintBottom_toTopOf="@+id/sb_join3"
+                app:layout_constraintEnd_toEndOf="@+id/sb_join3" />
+
+            <TextView
+                style="@style/TextView.sbText"
+                android:text="0"
+                app:layout_constraintBottom_toTopOf="@+id/sb_join3"
+                app:layout_constraintStart_toStartOf="@+id/sb_join3" />
+
+            <SeekBar
+                android:id="@+id/sb_join3"
+                style="@style/SeekBar.join"
+                android:onSeekBarChangeListener="@{viewModel.seekBarListener}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="325dp"
+            android:layout_height="67dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
+            <TextView
+                style="@style/TextView.sbText"
+                android:text="J4"
+                app:layout_constraintBottom_toTopOf="@+id/sb_join4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                style="@style/TextView.sbText"
+                android:text="100"
+                app:layout_constraintBottom_toTopOf="@+id/sb_join4"
+                app:layout_constraintEnd_toEndOf="@+id/sb_join4" />
+
+            <TextView
+                style="@style/TextView.sbText"
+                android:text="0"
+                app:layout_constraintBottom_toTopOf="@+id/sb_join4"
+                app:layout_constraintStart_toStartOf="@+id/sb_join4" />
+
+            <SeekBar
+                android:id="@+id/sb_join4"
+                style="@style/SeekBar.join"
+                android:onSeekBarChangeListener="@{viewModel.seekBarListener}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="141dp"
+            android:layout_height="34dp"
+            android:background="@color/colorButtonEnable"
+            android:entries="@array/workGroup"
+            android:onItemSelectedListener="@{viewModel.spinnerListener}"
+            app:layout_constraintBottom_toTopOf="@+id/bt_stop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
