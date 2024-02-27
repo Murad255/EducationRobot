@@ -1,68 +1,33 @@
-#include <Arduino.h>
+#define ledR 13
+#define ledG 25
+#define ledB 27
+
+#define join1 14
+#define join2 4
+#define join3 15
+#define join4 26
+
 #include <WiFi.h>
 #include <PubSubClient.h>
 #include <ESP32Servo.h>
 
-#include "Point.h"
-
-#define ledR 13
-#define ledG 23
-#define ledB 27
-
-#define join1 26
-#define join2 25
-#define join3 27
-#define join4 14
-
-#define sensor1 19
-#define sensor2 18
-
 /* change it with your ssid-password */
-const char *ssid = "xxxxxxx";
-const char *password = "xxxxxxx";
+const char *ssid = "APOLLO";
+const char *password = "ZXC123456";
 
-// const char *mqtt_server = "mqtt.eclipseprojects.io";
-const char *mqtt_server = "xxxxxxx";
+ const char *mqtt_server = "mqtt.eclipseprojects.io";
+//const char *mqtt_server = "xxxxxxxxxx";
 const char *mqtt_client_id = "work1";
-const char *mqtt_login = "xxxxxxx";
-const char *mqtt_password = "xxxxxxx";
+const char *mqtt_login = "";
+const char *mqtt_password = "";
 /* topics */
-#define TOPIC "work1/#"
-
-#define TOPIC_SENSOR1 "work1/sensor1"
-#define TOPIC_SENSOR2 "work1/sensor2"
+#define LED_TOPIC "work1/#"
 
 /* create an instance of PubSubClient client */
 WiFiClient espClient;
 PubSubClient client(espClient);
 
 Servo servo1, servo2, servo3, servo4;
-boolean sensor1PastState = false;
-boolean sensor2PastState = false;
-boolean startProgFlag = false;
-boolean stopFlag = false;
-
-const int MAX_POINTS = 10; // Максимальное количество точек для сохранения
-int savedPointCount = 0;   // количество сохранённых точек
-Point points[MAX_POINTS];  // Массив для хранения точек
-Point currentPoint;
-
-void GoToPoint(Point point)
-{
-  servo1.write(currentPoint.j1);
-  servo2.write(currentPoint.j2);
-  servo3.write(currentPoint.j3);
-  servo4.write(currentPoint.j4);
-}
-
-void move()
-{
-  for (int i = 0; (i < savedPointCount) && (!stopFlag); i++)
-  {
-    GoToPoint(points[i]);
-    delay(points[i].time);
-  }
-}
 
 void receivedCallback(char *topic, byte *payload, unsigned int length)
 {
@@ -81,26 +46,22 @@ void receivedCallback(char *topic, byte *payload, unsigned int length)
   if (topicStr.indexOf("join/1") >= 1)
   {
     int pos = payloadStr.toInt();
-    currentPoint.j1 = (int)map(pos, 0, 100, 0, 180);
-    servo1.write(currentPoint.j1);
+    servo1.write(map(pos, 0, 100, 0, 180));
   }
   else if (topicStr.indexOf("join/2") >= 1)
   {
     int pos = payloadStr.toInt();
-    currentPoint.j2 = (int)map(pos, 0, 100, 0, 180);
-    servo2.write(currentPoint.j2);
+    servo2.write(map(pos, 0, 100, 0, 180));
   }
   else if (topicStr.indexOf("join/3") >= 1)
   {
     int pos = payloadStr.toInt();
-    currentPoint.j3 = (int)map(pos, 0, 100, 0, 180);
-    servo3.write(currentPoint.j3);
+    servo3.write(map(pos, 0, 100, 0, 180));
   }
   else if (topicStr.indexOf("join/4") >= 1)
   {
     int pos = payloadStr.toInt();
-    currentPoint.j4 = (int)map(pos, 0, 100, 0, 180);
-    servo4.write(currentPoint.j4);
+    servo4.write(map(pos, 0, 100, 0, 180));
   }
   else if (topicStr.indexOf("mode") >= 1)
   {
@@ -128,31 +89,23 @@ void receivedCallback(char *topic, byte *payload, unsigned int length)
     }
     else if (payloadStr.indexOf("stop") >= 0)
     {
-      stopFlag = true;
+      // TODO stop handler
     }
     else if (payloadStr.indexOf("start") >= 0)
     {
-      startProgFlag = true;
+      // TODO start handler
     }
     else if (payloadStr.indexOf("save") >= 0)
     {
-      if (savedPointCount <= MAX_POINTS)
-      {
-        points[savedPointCount++] = currentPoint;
-        Serial.println("Save point");
-      }
-      else
-      {
-        Serial.println("Point limit");
-      }
+      // TODO save handler
     }
     else if (payloadStr.indexOf("clear") >= 0)
     {
-      savedPointCount = 0;
+      // TODO clear handler
     }
     else if (payloadStr.indexOf("back") >= 0)
     {
-      GoToPoint(points[savedPointCount - 1]);
+      // TODO back handler
     }
   }
 }
@@ -167,7 +120,7 @@ void mqttconnect()
     {
       Serial.println("connected");
       /* subscribe topic with default QoS 0*/
-      client.subscribe(TOPIC);
+      client.subscribe(LED_TOPIC);
       digitalWrite(ledB, 0);
     }
     else
@@ -187,9 +140,6 @@ void setup()
   pinMode(ledR, OUTPUT);
   pinMode(ledG, OUTPUT);
   pinMode(ledB, OUTPUT);
-
-  pinMode(sensor1, INPUT);
-  pinMode(sensor2, INPUT);
 
   servo1.attach(join1);
   servo2.attach(join2);
@@ -233,26 +183,4 @@ void loop()
     mqttconnect();
   }
   client.loop();
-
-  boolean sensor1State = digitalRead(sensor1);
-  boolean sensor2State = digitalRead(sensor2);
-  if (sensor1State != sensor1PastState)
-  {
-    client.publish(TOPIC_SENSOR1, sensor1State ? "1" : "0");
-    startProgFlag = sensor1State; // запустить движение по датчику
-    // Serial.println("sensor1 = "+sensor1State?"1":"0");
-  }
-  if (sensor2State != sensor2PastState)
-  {
-    client.publish(TOPIC_SENSOR2, sensor2State ? "1" : "0");
-    // Serial.println("sensor2 = "+sensor2State?"1":"0");
-  }
-  sensor1PastState = sensor1State;
-  sensor2PastState = sensor2State;
-
-  if (startProgFlag)
-  {
-    move();
-    startProgFlag = false;
-  }
 }
