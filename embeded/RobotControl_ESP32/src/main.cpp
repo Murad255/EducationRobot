@@ -17,15 +17,24 @@
 #define sensor1 19
 #define sensor2 18
 
+#define J1_MIN 0
+#define J1_MAX 180
+#define J2_MIN 70
+#define J2_MAX 180
+#define J3_MIN 113
+#define J3_MAX 180
+#define J4_MIN 0
+#define J4_MAX 180
+
 /* change it with your ssid-password */
-const char *ssid = "xxxxxxx";
-const char *password = "xxxxxxx";
+const char *ssid = "XXXXXXX";
+const char *password = "XXXXXXX";
 
 // const char *mqtt_server = "mqtt.eclipseprojects.io";
-const char *mqtt_server = "xxxxxxx";
+const char *mqtt_server = "192.168.XXXX.XXXX";
 const char *mqtt_client_id = "work1";
-const char *mqtt_login = "xxxxxxx";
-const char *mqtt_password = "xxxxxxx";
+const char *mqtt_login = "XXXXXXX";
+const char *mqtt_password = "XXXXXXX";
 /* topics */
 #define TOPIC "work1/#"
 
@@ -49,16 +58,27 @@ Point currentPoint;
 
 void GoToPoint(Point point)
 {
-  servo1.write(currentPoint.j1);
-  servo2.write(currentPoint.j2);
-  servo3.write(currentPoint.j3);
-  servo4.write(currentPoint.j4);
+  servo1.write(point.j1);
+  servo2.write(point.j2);
+  servo3.write(point.j3);
+  servo4.write(point.j4);
+}
+
+void PrintPoint(Point point)
+{
+  Serial.print("J1 = " + String(point.j1));
+  Serial.print("\tJ2 = " + String(point.j2));
+  Serial.print("\tJ3 = " + String(point.j3));
+  Serial.println("\tJ4 = " + String(point.j4));
 }
 
 void move()
 {
   for (int i = 0; (i < savedPointCount) && (!stopFlag); i++)
   {
+    Serial.print("Point:\t");
+    Serial.println(i);
+    PrintPoint(points[i]);
     GoToPoint(points[i]);
     delay(points[i].time);
   }
@@ -81,25 +101,25 @@ void receivedCallback(char *topic, byte *payload, unsigned int length)
   if (topicStr.indexOf("join/1") >= 1)
   {
     int pos = payloadStr.toInt();
-    currentPoint.j1 = (int)map(pos, 0, 100, 0, 180);
+    currentPoint.j1 = (int)map(pos, 0, 100, J1_MIN, J1_MAX);
     servo1.write(currentPoint.j1);
   }
   else if (topicStr.indexOf("join/2") >= 1)
   {
     int pos = payloadStr.toInt();
-    currentPoint.j2 = (int)map(pos, 0, 100, 0, 180);
+    currentPoint.j2 = (int)map(pos, 0, 100, J2_MIN, J2_MAX);
     servo2.write(currentPoint.j2);
   }
   else if (topicStr.indexOf("join/3") >= 1)
   {
     int pos = payloadStr.toInt();
-    currentPoint.j3 = (int)map(pos, 0, 100, 0, 180);
+    currentPoint.j3 = (int)map(pos, 0, 100, J3_MIN, J3_MAX);
     servo3.write(currentPoint.j3);
   }
   else if (topicStr.indexOf("join/4") >= 1)
   {
     int pos = payloadStr.toInt();
-    currentPoint.j4 = (int)map(pos, 0, 100, 0, 180);
+    currentPoint.j4 = (int)map(pos, 0, 100, J4_MIN, J4_MAX);
     servo4.write(currentPoint.j4);
   }
   else if (topicStr.indexOf("mode") >= 1)
@@ -138,8 +158,9 @@ void receivedCallback(char *topic, byte *payload, unsigned int length)
     {
       if (savedPointCount <= MAX_POINTS)
       {
-        points[savedPointCount++] = currentPoint;
-        Serial.println("Save point");
+        points[savedPointCount] = currentPoint;
+        Serial.println("Save point " + String(savedPointCount));
+        PrintPoint(points[savedPointCount++]);
       }
       else
       {
@@ -252,7 +273,9 @@ void loop()
 
   if (startProgFlag)
   {
+    Serial.println("Start move");
     move();
     startProgFlag = false;
+    Serial.println("End move");
   }
 }

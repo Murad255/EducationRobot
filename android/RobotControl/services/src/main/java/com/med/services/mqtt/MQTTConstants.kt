@@ -3,8 +3,8 @@ package com.med.services.mqtt
 import com.med.domain.MQTT_QOS
 
 val MQTT_SERVER_LIST = arrayOf(
-    MqttBrokerAddress("tcp://192.168.31.43:1883", "user", "password"),
-    MqttBrokerAddress("tcp://mqtt.eclipseprojects.io:1883")
+    MqttBrokerAddress("tcp://192.168.31.43:1883", "user", "quantumsystems"),
+    MqttBrokerAddress("tcp://mqtt.eclipseprojects.io :1883")
 )
 const val GROUP = "userM"
 const val IN_DEVICES         = "userM/devices/in"
