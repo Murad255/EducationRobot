@@ -27,14 +27,14 @@
 #define J4_MAX 180
 
 /* change it with your ssid-password */
-const char *ssid = "XXXXXXX";
-const char *password = "XXXXXXX";
+const char *ssid = "XXXXXXXXX";
+const char *password = "XXXXXX";
 
 // const char *mqtt_server = "mqtt.eclipseprojects.io";
-const char *mqtt_server = "192.168.XXXX.XXXX";
+const char *mqtt_server = "192.168.31.XXXXXXXX";
 const char *mqtt_client_id = "work1";
-const char *mqtt_login = "XXXXXXX";
-const char *mqtt_password = "XXXXXXX";
+const char *mqtt_login = "robot";
+const char *mqtt_password = "control";
 /* topics */
 #define TOPIC "work1/#"
 
@@ -55,6 +55,7 @@ const int MAX_POINTS = 10; // Максимальное количество то
 int savedPointCount = 0;   // количество сохранённых точек
 Point points[MAX_POINTS];  // Массив для хранения точек
 Point currentPoint;
+const int stepsCount = 20;
 
 void GoToPoint(Point point)
 {
@@ -62,6 +63,20 @@ void GoToPoint(Point point)
   servo2.write(point.j2);
   servo3.write(point.j3);
   servo4.write(point.j4);
+}
+
+void GoToPTP(Point pointStart, Point pointEnd)
+{
+  for (int i = 1; i <= stepsCount; i++)
+  {
+    Point tempPoint;
+    tempPoint.j1 = pointStart.j1 + (pointEnd.j1 - pointStart.j1) * i / stepsCount;
+    tempPoint.j2 = pointStart.j2 + (pointEnd.j2 - pointStart.j2) * i / stepsCount;
+    tempPoint.j3 = pointStart.j3 + (pointEnd.j3 - pointStart.j3) * i / stepsCount;
+    tempPoint.j4 = pointStart.j4 + (pointEnd.j4 - pointStart.j4) * i / stepsCount;
+    GoToPoint(tempPoint);
+    delay(pointEnd.time / stepsCount);
+  }
 }
 
 void PrintPoint(Point point)
@@ -74,13 +89,19 @@ void PrintPoint(Point point)
 
 void move()
 {
-  for (int i = 0; (i < savedPointCount) && (!stopFlag); i++)
+  if (savedPointCount == 0)
+    return;
+
+  GoToPTP(currentPoint, points[0]);
+  for (int i = 1; (i < savedPointCount) && (!stopFlag); i++)
   {
-    Serial.print("Point:\t");
-    Serial.println(i);
-    PrintPoint(points[i]);
-    GoToPoint(points[i]);
-    delay(points[i].time);
+    GoToPTP(points[i - 1], points[i]);
+
+    // Serial.print("Point:\t");
+    // Serial.println(i);
+    // PrintPoint(points[i]);
+    // GoToPoint(points[i]);
+    // delay(points[i].time);
   }
 }
 
@@ -121,6 +142,10 @@ void receivedCallback(char *topic, byte *payload, unsigned int length)
     int pos = payloadStr.toInt();
     currentPoint.j4 = (int)map(pos, 0, 100, J4_MIN, J4_MAX);
     servo4.write(currentPoint.j4);
+  }
+  else if (topicStr.indexOf("time") >= 1)
+  {
+    currentPoint.time = payloadStr.toInt();
   }
   else if (topicStr.indexOf("mode") >= 1)
   {

@@ -16,12 +16,4 @@ public:
 	}
 
 	Point() {}
-
-	void equal(Point point)
-	{
-		j1 = point.j1;
-		j2 = point.j2;
-		j3 = point.j3;
-		j4 = point.j4;
-	}
 };

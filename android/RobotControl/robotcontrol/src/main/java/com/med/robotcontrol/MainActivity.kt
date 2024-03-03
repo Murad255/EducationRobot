@@ -1,9 +1,10 @@
 package com.med.robotcontrol
 
+import android.app.ActionBar
 import android.app.Activity
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.lifecycle.ViewModelProvider
 
@@ -19,7 +20,6 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
             .get(MainViewModel::class.java)
 
         requestPermission("android.permission.POST_NOTIFICATIONS",1)
-
 
         supportFragmentManager.beginTransaction().replace(
             R.id.nav_host_fragment,

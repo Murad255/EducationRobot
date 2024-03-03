@@ -97,8 +97,10 @@ class MainViewModel(
                 R.id.sb_join2 -> join = 2
                 R.id.sb_join3 -> join = 3
                 R.id.sb_join4 -> join = 4
+               // R.id.sb_time ->  join = 5
             }
-            sentJoinPos(progress, join)
+            if (join != -1)
+                sentJoinPos(progress, join)
         }
 
         override fun onStartTrackingTouch(seekBar: SeekBar) {
@@ -113,8 +115,10 @@ class MainViewModel(
                 R.id.sb_join2 -> join = 2
                 R.id.sb_join3 -> join = 3
                 R.id.sb_join4 -> join = 4
+                R.id.sb_time ->  join = 0
             }
-            sentJoinPos(seekBar.progress, join)
+            if (join != -1)
+                sentJoinPos(seekBar.progress, join)
         }
     }
 
@@ -149,7 +153,10 @@ class MainViewModel(
 
     fun sentJoinPos(pos: Int, joinNum: Int){
         if (!CheckGroup()) return
-        sentMqtt(pos.toString(),group+"/join/"+joinNum)
+        if (joinNum == 0)
+            sentMqtt(pos.toString(),group+"/time")
+        else
+            sentMqtt(pos.toString(),group+"/join/"+joinNum)
 
     }
 
