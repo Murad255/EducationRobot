@@ -126,7 +126,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bt_stop4"
-            app:layout_constraintVertical_bias="0.262">
+            app:layout_constraintVertical_bias="0.114">
 
 
             <TextView
@@ -238,10 +238,11 @@
             android:id="@+id/constraintLayout2"
             android:layout_width="325dp"
             android:layout_height="55dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="4dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
+
 
             <TextView
                 style="@style/TextView.sbText"
@@ -273,12 +274,50 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout5"
             android:layout_width="325dp"
             android:layout_height="55dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="4dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+            <TextView
+                style="@style/TextView.sbText"
+                android:text="J5"
+                app:layout_constraintBottom_toTopOf="@+id/sb_join5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                style="@style/TextView.sbText"
+                android:text="100"
+                app:layout_constraintBottom_toTopOf="@+id/sb_join5"
+                app:layout_constraintEnd_toEndOf="@+id/sb_join5" />
+
+            <TextView
+                style="@style/TextView.sbText"
+                android:text="0"
+                app:layout_constraintBottom_toTopOf="@+id/sb_join5"
+                app:layout_constraintStart_toStartOf="@+id/sb_join5" />
+
+            <SeekBar
+                android:id="@+id/sb_join5"
+                style="@style/SeekBar.join"
+                android:onSeekBarChangeListener="@{viewModel.seekBarListener}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="325dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout5">
 
             <TextView
                 style="@style/TextView.sbText"

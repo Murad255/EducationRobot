@@ -115,6 +115,7 @@ class MainViewModel(
                 R.id.sb_join2 -> join = 2
                 R.id.sb_join3 -> join = 3
                 R.id.sb_join4 -> join = 4
+                R.id.sb_join5 -> join = 5
                 R.id.sb_time ->  join = 0
             }
             if (join != -1)

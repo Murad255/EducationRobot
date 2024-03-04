@@ -105,7 +105,7 @@ void move()
   }
 }
 
-void receivedCallback(char *topic, byte *payload, unsigned int length)
+void 1(char *topic, byte *payload, unsigned int length)
 {
   String topicStr(topic);
   char *payloadCh = (char *)payload;
