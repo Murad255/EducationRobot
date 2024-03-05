@@ -2,7 +2,8 @@
 #include <WiFi.h>
 #include <PubSubClient.h>
 #include <ESP32Servo.h>
-
+#include <DHT.h>
+#include <Adafruit_Sensor.h>
 #include "Point.h"
 
 #define ledR 13
@@ -17,6 +18,7 @@
 
 #define sensor1 19
 #define sensor2 18
+#define DHTPin 4
 
 #define J1_MIN 0
 #define J1_MAX 180
@@ -43,6 +45,8 @@ const char *mqtt_password = "control";
 
 #define TOPIC_SENSOR1 "work1/sensor1"
 #define TOPIC_SENSOR2 "work1/sensor2"
+#define TOPIC_SENSOR_TEMP "work1/temp"
+#define TOPIC_SENSOR_HUMP "work1/temp"
 
 /* create an instance of PubSubClient client */
 WiFiClient espClient;
@@ -59,6 +63,9 @@ int savedPointCount = 0;   // количество сохранённых точ
 Point points[MAX_POINTS];  // Массив для хранения точек
 Point currentPoint;
 const int stepsCount = 20;
+
+long pastSentTime = 0;
+DHT dht(DHTPin, DHT11); // Инициализируем DHT
 
 void GoToPoint(Point point)
 {
@@ -111,9 +118,8 @@ void move1()
 {
   Serial.println("Start move1");
   Point move1Points[] = {
-    Point(0,0,0,0,0,1000),
-    Point(0,0,0,0,0,1000)
-  };
+      Point(0, 0, 0, 0, 0, 1000),
+      Point(0, 0, 0, 0, 0, 1000)};
   int pointsSize = 2;
 
   if (pointsSize == 0)
@@ -131,11 +137,9 @@ void move2()
 {
   Serial.println("End move2");
   Point move2Points[] = {
-    Point(0,0,0,0,0,1000),
-    Point(0,0,0,0,0,1000)
-  };
+      Point(0, 0, 0, 0, 0, 1000),
+      Point(0, 0, 0, 0, 0, 1000)};
   int pointsSize = 2;
-
 
   if (pointsSize == 0)
     return;
@@ -165,31 +169,31 @@ void receivedCallback(char *topic, byte *payload, unsigned int length)
   if (topicStr.indexOf("join/1") >= 1)
   {
     int pos = payloadStr.toInt();
-    currentPoint.j1 = (int)map(pos, 0, 100, J1_MIN, J1_MAX);
+    currentPoint.j1 = pos;//(int)map(pos, 0, 100, J1_MIN, J1_MAX);
     servo1.write(currentPoint.j1);
   }
   else if (topicStr.indexOf("join/2") >= 1)
   {
     int pos = payloadStr.toInt();
-    currentPoint.j2 = (int)map(pos, 0, 100, J2_MIN, J2_MAX);
+    currentPoint.j2 = pos;//(int)map(pos, 0, 100, J2_MIN, J2_MAX);
     servo2.write(currentPoint.j2);
   }
   else if (topicStr.indexOf("join/3") >= 1)
   {
     int pos = payloadStr.toInt();
-    currentPoint.j3 = (int)map(pos, 0, 100, J3_MIN, J3_MAX);
+    currentPoint.j3 = pos;//(int)map(pos, 0, 100, J3_MIN, J3_MAX);
     servo3.write(currentPoint.j3);
   }
   else if (topicStr.indexOf("join/4") >= 1)
   {
     int pos = payloadStr.toInt();
-    currentPoint.j4 = (int)map(pos, 0, 100, J4_MIN, J4_MAX);
+    currentPoint.j4 = pos;//(int)map(pos, 0, 100, J4_MIN, J4_MAX);
     servo4.write(currentPoint.j4);
   }
   else if (topicStr.indexOf("join/5") >= 1)
   {
     int pos = payloadStr.toInt();
-    currentPoint.j5 = (int)map(pos, 0, 100, J5_MIN, J5_MAX);
+    currentPoint.j5 = (int)map(pos, 0, 270, J5_MIN, J5_MAX);
     servo4.write(currentPoint.j5);
   }
   else if (topicStr.indexOf("time") >= 1)
@@ -204,12 +208,12 @@ void receivedCallback(char *topic, byte *payload, unsigned int length)
     if (payloadStr.indexOf("set") >= 0)
     {
       currentPoint.j5 = 40;
-      servo4.write(currentPoint.j5);    
+      servo4.write(currentPoint.j5);
     }
     else if (payloadStr.indexOf("reset") >= 0)
     {
       currentPoint.j5 = J5_MAX;
-      servo4.write(currentPoint.j5);   
+      servo4.write(currentPoint.j5);
     }
     else if (payloadStr.indexOf("stop") >= 0)
     {
@@ -270,12 +274,10 @@ void mqttconnect()
 void setup()
 {
   Serial.begin(115200);
-  pinMode(ledR, OUTPUT);
-  pinMode(ledG, OUTPUT);
-  pinMode(ledB, OUTPUT);
 
   pinMode(sensor1, INPUT);
   pinMode(sensor2, INPUT);
+  pinMode(DHTPin, INPUT);
 
   servo1.attach(join1);
   servo2.attach(join2);
@@ -287,7 +289,6 @@ void setup()
   Serial.println();
   Serial.print("Connecting to ");
   Serial.println(ssid);
-  digitalWrite(ledG, 1);
   WiFi.begin(ssid, password);
 
   while (WiFi.status() != WL_CONNECTED)
@@ -295,7 +296,6 @@ void setup()
     delay(500);
     Serial.print(".");
   }
-  digitalWrite(ledG, 0);
 
   /* set led as output to control led on-off */
 
@@ -303,7 +303,7 @@ void setup()
   Serial.println("WiFi connected");
   Serial.println("IP address: ");
   Serial.println(WiFi.localIP());
-  digitalWrite(ledB, 1);
+  dht.begin();
 
   /* configure the MQTT server with IPaddress and port */
   client.setServer(mqtt_server, 1883);
@@ -333,8 +333,7 @@ void loop()
   if (sensor2State != sensor2PastState)
   {
     client.publish(TOPIC_SENSOR2, sensor2State ? "1" : "0");
-    // Serial.println("sensor2 = "+sensor2State?"1":"0");
-        // запустить движение по датчику
+    // запустить движение по датчику
     if (sensor2State == true)
       move2();
   }
@@ -348,5 +347,15 @@ void loop()
     startProgFlag = false;
     Serial.println("End move");
   }
-}
 
+  long currentTime = millis();
+  if (currentTime - pastSentTime >= 1000)
+  {
+    pastSentTime = currentTime;
+    float temp = dht.readTemperature();
+    float hum = dht.readHumidity();
+
+    client.publish(TOPIC_SENSOR_TEMP, String(temp).c_str());
+    client.publish(TOPIC_SENSOR_HUMP, String(hum).c_str());
+  }
+}

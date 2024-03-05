@@ -8,6 +8,7 @@ val MQTT_SERVER_LIST = arrayOf(
     MqttBrokerAddress("tcp://192.168.31.198:1883", "robot", "control"),
     MqttBrokerAddress("tcp://mqtt.eclipseprojects.io:1883")
 )
+
 const val GROUP = "userM"
 const val IN_DEVICES         = "userM/devices/in"
 const val OUT_DEVICES        = "userM/devices/out"

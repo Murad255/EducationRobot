@@ -139,7 +139,7 @@
 
             <TextView
                 style="@style/TextView.sbText"
-                android:text="100"
+                android:text="270"
                 app:layout_constraintBottom_toTopOf="@+id/sb_join1"
                 app:layout_constraintEnd_toEndOf="@+id/sb_join1" />
 
@@ -152,6 +152,7 @@
             <SeekBar
                 android:id="@+id/sb_join1"
                 style="@style/SeekBar.join"
+                android:max="270"
                 android:onSeekBarChangeListener="@{viewModel.seekBarListener}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -177,19 +178,21 @@
 
             <TextView
                 style="@style/TextView.sbText"
-                android:text="100"
+                android:text="180"
                 app:layout_constraintBottom_toTopOf="@+id/sb_join2"
                 app:layout_constraintEnd_toEndOf="@+id/sb_join2" />
 
             <TextView
                 style="@style/TextView.sbText"
-                android:text="0"
+                android:text="70"
                 app:layout_constraintBottom_toTopOf="@+id/sb_join2"
                 app:layout_constraintStart_toStartOf="@+id/sb_join2" />
 
             <SeekBar
                 android:id="@+id/sb_join2"
                 style="@style/SeekBar.join"
+                android:min="70"
+                android:max="180"
                 android:onSeekBarChangeListener="@{viewModel.seekBarListener}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -215,19 +218,21 @@
 
             <TextView
                 style="@style/TextView.sbText"
-                android:text="100"
+                android:text="180"
                 app:layout_constraintBottom_toTopOf="@+id/sb_join3"
                 app:layout_constraintEnd_toEndOf="@+id/sb_join3" />
 
             <TextView
                 style="@style/TextView.sbText"
-                android:text="0"
+                android:text="113"
                 app:layout_constraintBottom_toTopOf="@+id/sb_join3"
                 app:layout_constraintStart_toStartOf="@+id/sb_join3" />
 
             <SeekBar
                 android:id="@+id/sb_join3"
                 style="@style/SeekBar.join"
+                android:min="113"
+                android:max="180"
                 android:onSeekBarChangeListener="@{viewModel.seekBarListener}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -254,7 +259,7 @@
 
             <TextView
                 style="@style/TextView.sbText"
-                android:text="100"
+                android:text="180"
                 app:layout_constraintBottom_toTopOf="@+id/sb_join4"
                 app:layout_constraintEnd_toEndOf="@+id/sb_join4" />
 
@@ -267,6 +272,7 @@
             <SeekBar
                 android:id="@+id/sb_join4"
                 style="@style/SeekBar.join"
+                android:max="180"
                 android:onSeekBarChangeListener="@{viewModel.seekBarListener}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -292,7 +298,7 @@
 
             <TextView
                 style="@style/TextView.sbText"
-                android:text="100"
+                android:text="180"
                 app:layout_constraintBottom_toTopOf="@+id/sb_join5"
                 app:layout_constraintEnd_toEndOf="@+id/sb_join5" />
 
@@ -305,6 +311,7 @@
             <SeekBar
                 android:id="@+id/sb_join5"
                 style="@style/SeekBar.join"
+                android:max="180"
                 android:onSeekBarChangeListener="@{viewModel.seekBarListener}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -361,7 +368,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

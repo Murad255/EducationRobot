@@ -20,6 +20,6 @@ public:
 	Point() {}
 	String toStrintg()
 	{
-		return "Point(" + String(j1) + "," + String(j2) + "," + String(j3) + "," + String(j4) + "," + String(j5) + "," + String(time) + ")";
+		return "Point(" + String(j1) + "," + String(j2) + "," + String(j3) + "," + String(j4) + "," + String(j5) + "," + String(time) + "),";
 	}
 };
