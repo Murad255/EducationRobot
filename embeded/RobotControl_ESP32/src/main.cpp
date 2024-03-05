@@ -31,22 +31,28 @@
 #define J5_MIN 0
 #define J5_MAX 180
 
+#define J1_START 90
+#define J2_START 120
+#define J3_START 170
+#define J4_START 90
+#define J5_START 90
+
 /* change it with your ssid-password */
-const char *ssid = "XXXXXX";
-const char *password = "XXXXXX";
+const char *ssid = "ХХХХХХХХХ";
+const char *password = "ХХХХХХХХХ";
 
 // const char *mqtt_server = "mqtt.eclipseprojects.io";
-const char *mqtt_server = "192.168.31.XXXXXX";
+const char *mqtt_server = "192.168.ХХХХХХХХХ";
 const char *mqtt_client_id = "work1";
-const char *mqtt_login = "robot";
-const char *mqtt_password = "control";
+const char *mqtt_login = "ХХХХХХХХХ";
+const char *mqtt_password = "ХХХХХХХХХ";
 /* topics */
 #define TOPIC "work1/#"
 
 #define TOPIC_SENSOR1 "work1/sensor1"
 #define TOPIC_SENSOR2 "work1/sensor2"
 #define TOPIC_SENSOR_TEMP "work1/temp"
-#define TOPIC_SENSOR_HUMP "work1/temp"
+#define TOPIC_SENSOR_HUMP "work1/hump"
 
 /* create an instance of PubSubClient client */
 WiFiClient espClient;
@@ -61,7 +67,7 @@ boolean stopFlag = false;
 const int MAX_POINTS = 10; // Максимальное количество точек для сохранения
 int savedPointCount = 0;   // количество сохранённых точек
 Point points[MAX_POINTS];  // Массив для хранения точек
-Point currentPoint;
+Point currentPoint(J1_START, J2_START, J3_START, J4_START, J5_START, 1000);
 const int stepsCount = 20;
 
 long pastSentTime = 0;
@@ -112,6 +118,7 @@ void move()
     GoToPTP(points[i - 1], points[i]);
     Serial.println(points[i].toStrintg());
   }
+  currentPoint = points[savedPointCount - 1];
 }
 
 void move1()
@@ -130,6 +137,7 @@ void move1()
   {
     GoToPTP(move1Points[i - 1], move1Points[i]);
   }
+  currentPoint = points[pointsSize - 1];
   Serial.println("End move1");
 }
 
@@ -149,6 +157,7 @@ void move2()
   {
     GoToPTP(move2Points[i - 1], move2Points[i]);
   }
+  currentPoint = points[pointsSize - 1];
   Serial.println("End move2");
 }
 
@@ -169,31 +178,32 @@ void receivedCallback(char *topic, byte *payload, unsigned int length)
   if (topicStr.indexOf("join/1") >= 1)
   {
     int pos = payloadStr.toInt();
-    currentPoint.j1 = pos;//(int)map(pos, 0, 100, J1_MIN, J1_MAX);
+    currentPoint.j1 = min(max(pos, J1_MIN), J1_MAX); //(int)map(pos, 0, 100, J1_MIN, J1_MAX);
     servo1.write(currentPoint.j1);
   }
   else if (topicStr.indexOf("join/2") >= 1)
   {
     int pos = payloadStr.toInt();
-    currentPoint.j2 = pos;//(int)map(pos, 0, 100, J2_MIN, J2_MAX);
+    currentPoint.j2 = min(max(pos, J2_MIN), J2_MAX); //(int)map(pos, 0, 100, J2_MIN, J2_MAX);
     servo2.write(currentPoint.j2);
   }
   else if (topicStr.indexOf("join/3") >= 1)
   {
     int pos = payloadStr.toInt();
-    currentPoint.j3 = pos;//(int)map(pos, 0, 100, J3_MIN, J3_MAX);
+    currentPoint.j3 = min(max(pos, J3_MIN), J3_MAX); //(int)map(pos, 0, 100, J3_MIN, J3_MAX);
     servo3.write(currentPoint.j3);
   }
   else if (topicStr.indexOf("join/4") >= 1)
   {
     int pos = payloadStr.toInt();
-    currentPoint.j4 = pos;//(int)map(pos, 0, 100, J4_MIN, J4_MAX);
+    currentPoint.j4 = min(max(pos, J4_MIN), J4_MAX);
+    ; //(int)map(pos, 0, 100, J4_MIN, J4_MAX);
     servo4.write(currentPoint.j4);
   }
   else if (topicStr.indexOf("join/5") >= 1)
   {
     int pos = payloadStr.toInt();
-    currentPoint.j5 = (int)map(pos, 0, 270, J5_MIN, J5_MAX);
+    currentPoint.j5 = min(max(pos, J5_MIN), J5_MAX); // (int)map(pos, 0, 270, J5_MIN, J5_MAX);
     servo4.write(currentPoint.j5);
   }
   else if (topicStr.indexOf("time") >= 1)
@@ -271,6 +281,7 @@ void mqttconnect()
   }
 }
 
+/////////////////////////////////////SETUP////////////////////////////////////////
 void setup()
 {
   Serial.begin(115200);
@@ -310,8 +321,10 @@ void setup()
   /* this receivedCallback function will be invoked
   when client received subscribed topic */
   client.setCallback(receivedCallback);
+  GoToPoint(currentPoint);
 }
 
+/////////////////////////////////////LOOP////////////////////////////////////////
 void loop()
 {
   /* if client was disconnected then try to reconnect again */
@@ -327,15 +340,15 @@ void loop()
   {
     client.publish(TOPIC_SENSOR1, sensor1State ? "1" : "0");
     // запустить движение по 1 датчику
-    if (sensor1State == true)
-      move1();
+    // if (sensor1State == true)
+    //   move1();
   }
   if (sensor2State != sensor2PastState)
   {
     client.publish(TOPIC_SENSOR2, sensor2State ? "1" : "0");
     // запустить движение по датчику
-    if (sensor2State == true)
-      move2();
+    // if (sensor2State == true)
+    //   move2();
   }
   sensor1PastState = sensor1State;
   sensor2PastState = sensor2State;

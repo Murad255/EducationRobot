@@ -184,14 +184,14 @@
 
             <TextView
                 style="@style/TextView.sbText"
-                android:text="70"
+                android:text="0"
                 app:layout_constraintBottom_toTopOf="@+id/sb_join2"
                 app:layout_constraintStart_toStartOf="@+id/sb_join2" />
 
             <SeekBar
                 android:id="@+id/sb_join2"
                 style="@style/SeekBar.join"
-                android:min="70"
+                android:min="0"
                 android:max="180"
                 android:onSeekBarChangeListener="@{viewModel.seekBarListener}"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -224,14 +224,14 @@
 
             <TextView
                 style="@style/TextView.sbText"
-                android:text="113"
+                android:text="0"
                 app:layout_constraintBottom_toTopOf="@+id/sb_join3"
                 app:layout_constraintStart_toStartOf="@+id/sb_join3" />
 
             <SeekBar
                 android:id="@+id/sb_join3"
                 style="@style/SeekBar.join"
-                android:min="113"
+                android:min="0"
                 android:max="180"
                 android:onSeekBarChangeListener="@{viewModel.seekBarListener}"
                 app:layout_constraintBottom_toBottomOf="parent"
