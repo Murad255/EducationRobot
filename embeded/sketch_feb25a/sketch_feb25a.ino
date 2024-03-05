@@ -29,11 +29,11 @@
 #define J5_MAX 180
 
 /* change it with your ssid-password */
-const char *ssid = "XXXXXXXXX";
+const char *ssid = "XXXXXX";
 const char *password = "XXXXXX";
 
 // const char *mqtt_server = "mqtt.eclipseprojects.io";
-const char *mqtt_server = "192.168.31.XXXXXXXX";
+const char *mqtt_server = "192.168.31.XXXXXX";
 const char *mqtt_client_id = "work1";
 const char *mqtt_login = "robot";
 const char *mqtt_password = "control";
@@ -98,10 +98,53 @@ void move()
     return;
 
   GoToPTP(currentPoint, points[0]);
+  Serial.println(points[0].toStrintg());
   for (int i = 1; (i < savedPointCount) && (!stopFlag); i++)
   {
     GoToPTP(points[i - 1], points[i]);
+    Serial.println(points[i].toStrintg());
   }
+}
+
+void move1()
+{
+  Serial.println("Start move1");
+  Point move1Points[] = {
+    Point(0,0,0,0,0,1000),
+    Point(0,0,0,0,0,1000)
+  };
+  int pointsSize = 2;
+
+  if (pointsSize == 0)
+    return;
+
+  GoToPTP(currentPoint, move1Points[0]);
+  for (int i = 1; (i < pointsSize) && (!stopFlag); i++)
+  {
+    GoToPTP(move1Points[i - 1], move1Points[i]);
+  }
+  Serial.println("End move1");
+}
+
+void move2()
+{
+  Serial.println("End move2");
+  Point move2Points[] = {
+    Point(0,0,0,0,0,1000),
+    Point(0,0,0,0,0,1000)
+  };
+  int pointsSize = 2;
+
+
+  if (pointsSize == 0)
+    return;
+
+  GoToPTP(currentPoint, move2Points[0]);
+  for (int i = 1; (i < pointsSize) && (!stopFlag); i++)
+  {
+    GoToPTP(move2Points[i - 1], move2Points[i]);
+  }
+  Serial.println("End move2");
 }
 
 void receivedCallback(char *topic, byte *payload, unsigned int length)
@@ -282,15 +325,17 @@ void loop()
   if (sensor1State != sensor1PastState)
   {
     client.publish(TOPIC_SENSOR1, sensor1State ? "1" : "0");
-    startProgFlag = sensor1State; // запустить движение по датчику
+    // запустить движение по 1 датчику
     if (sensor1State == true)
-      move();
-    // Serial.println("sensor1 = "+sensor1State?"1":"0");
+      move1();
   }
   if (sensor2State != sensor2PastState)
   {
     client.publish(TOPIC_SENSOR2, sensor2State ? "1" : "0");
     // Serial.println("sensor2 = "+sensor2State?"1":"0");
+        // запустить движение по датчику
+    if (sensor2State == true)
+      move2();
   }
   sensor1PastState = sensor1State;
   sensor2PastState = sensor2State;

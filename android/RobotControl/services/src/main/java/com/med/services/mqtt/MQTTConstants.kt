@@ -5,6 +5,7 @@ import com.med.domain.MQTT_QOS
 val MQTT_SERVER_LIST = arrayOf(
     MqttBrokerAddress("tcp://192.168.8.151:1883", "admin", "semen"),
     MqttBrokerAddress("tcp://82.146.60.95:1883", "admin1", "@dm!N"),
+    MqttBrokerAddress("tcp://192.168.31.198:1883", "robot", "control"),
     MqttBrokerAddress("tcp://mqtt.eclipseprojects.io:1883")
 )
 const val GROUP = "userM"

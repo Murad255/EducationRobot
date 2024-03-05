@@ -13,6 +13,7 @@
 #define join2 25
 #define join3 27
 #define join4 14
+#define join5 12
 
 #define sensor1 19
 #define sensor2 18
@@ -25,13 +26,15 @@
 #define J3_MAX 180
 #define J4_MIN 0
 #define J4_MAX 180
+#define J5_MIN 0
+#define J5_MAX 180
 
 /* change it with your ssid-password */
-const char *ssid = "XXXXXXXXX";
+const char *ssid = "XXXXXX";
 const char *password = "XXXXXX";
 
 // const char *mqtt_server = "mqtt.eclipseprojects.io";
-const char *mqtt_server = "192.168.31.XXXXXXXX";
+const char *mqtt_server = "192.168.31.XXXXXX";
 const char *mqtt_client_id = "work1";
 const char *mqtt_login = "robot";
 const char *mqtt_password = "control";
@@ -45,7 +48,7 @@ const char *mqtt_password = "control";
 WiFiClient espClient;
 PubSubClient client(espClient);
 
-Servo servo1, servo2, servo3, servo4;
+Servo servo1, servo2, servo3, servo4, servo5;
 boolean sensor1PastState = false;
 boolean sensor2PastState = false;
 boolean startProgFlag = false;
@@ -63,6 +66,7 @@ void GoToPoint(Point point)
   servo2.write(point.j2);
   servo3.write(point.j3);
   servo4.write(point.j4);
+  servo5.write(point.j5);
 }
 
 void GoToPTP(Point pointStart, Point pointEnd)
@@ -74,6 +78,7 @@ void GoToPTP(Point pointStart, Point pointEnd)
     tempPoint.j2 = pointStart.j2 + (pointEnd.j2 - pointStart.j2) * i / stepsCount;
     tempPoint.j3 = pointStart.j3 + (pointEnd.j3 - pointStart.j3) * i / stepsCount;
     tempPoint.j4 = pointStart.j4 + (pointEnd.j4 - pointStart.j4) * i / stepsCount;
+    tempPoint.j5 = pointStart.j5 + (pointEnd.j5 - pointStart.j5) * i / stepsCount;
     GoToPoint(tempPoint);
     delay(pointEnd.time / stepsCount);
   }
@@ -85,6 +90,7 @@ void PrintPoint(Point point)
   Serial.print("\tJ2 = " + String(point.j2));
   Serial.print("\tJ3 = " + String(point.j3));
   Serial.println("\tJ4 = " + String(point.j4));
+  Serial.println("\tJ5 = " + String(point.j5));
 }
 
 void move()
@@ -93,19 +99,56 @@ void move()
     return;
 
   GoToPTP(currentPoint, points[0]);
+  Serial.println(points[0].toStrintg());
   for (int i = 1; (i < savedPointCount) && (!stopFlag); i++)
   {
     GoToPTP(points[i - 1], points[i]);
-
-    // Serial.print("Point:\t");
-    // Serial.println(i);
-    // PrintPoint(points[i]);
-    // GoToPoint(points[i]);
-    // delay(points[i].time);
+    Serial.println(points[i].toStrintg());
   }
 }
 
-void 1(char *topic, byte *payload, unsigned int length)
+void move1()
+{
+  Serial.println("Start move1");
+  Point move1Points[] = {
+    Point(0,0,0,0,0,1000),
+    Point(0,0,0,0,0,1000)
+  };
+  int pointsSize = 2;
+
+  if (pointsSize == 0)
+    return;
+
+  GoToPTP(currentPoint, move1Points[0]);
+  for (int i = 1; (i < pointsSize) && (!stopFlag); i++)
+  {
+    GoToPTP(move1Points[i - 1], move1Points[i]);
+  }
+  Serial.println("End move1");
+}
+
+void move2()
+{
+  Serial.println("End move2");
+  Point move2Points[] = {
+    Point(0,0,0,0,0,1000),
+    Point(0,0,0,0,0,1000)
+  };
+  int pointsSize = 2;
+
+
+  if (pointsSize == 0)
+    return;
+
+  GoToPTP(currentPoint, move2Points[0]);
+  for (int i = 1; (i < pointsSize) && (!stopFlag); i++)
+  {
+    GoToPTP(move2Points[i - 1], move2Points[i]);
+  }
+  Serial.println("End move2");
+}
+
+void receivedCallback(char *topic, byte *payload, unsigned int length)
 {
   String topicStr(topic);
   char *payloadCh = (char *)payload;
@@ -143,6 +186,12 @@ void 1(char *topic, byte *payload, unsigned int length)
     currentPoint.j4 = (int)map(pos, 0, 100, J4_MIN, J4_MAX);
     servo4.write(currentPoint.j4);
   }
+  else if (topicStr.indexOf("join/5") >= 1)
+  {
+    int pos = payloadStr.toInt();
+    currentPoint.j5 = (int)map(pos, 0, 100, J5_MIN, J5_MAX);
+    servo4.write(currentPoint.j5);
+  }
   else if (topicStr.indexOf("time") >= 1)
   {
     currentPoint.time = payloadStr.toInt();
@@ -154,22 +203,13 @@ void 1(char *topic, byte *payload, unsigned int length)
     digitalWrite(ledR, LOW);
     if (payloadStr.indexOf("set") >= 0)
     {
-      digitalWrite(ledB, 1);
-      for (int pos = 0; pos <= 180; pos += 1)
-      {
-        servo1.write(pos);
-        delay(15);
-      }
-      for (int pos = 180; pos >= 0; pos -= 1)
-      {
-        servo1.write(pos);
-        delay(15);
-      }
-      digitalWrite(ledB, 0);
+      currentPoint.j5 = 40;
+      servo4.write(currentPoint.j5);    
     }
     else if (payloadStr.indexOf("reset") >= 0)
     {
-      // TODO reset handler
+      currentPoint.j5 = J5_MAX;
+      servo4.write(currentPoint.j5);   
     }
     else if (payloadStr.indexOf("stop") >= 0)
     {
@@ -241,6 +281,7 @@ void setup()
   servo2.attach(join2);
   servo3.attach(join3);
   servo4.attach(join4);
+  servo5.attach(join5);
 
   // We start by connecting to a WiFi network
   Serial.println();
@@ -285,13 +326,17 @@ void loop()
   if (sensor1State != sensor1PastState)
   {
     client.publish(TOPIC_SENSOR1, sensor1State ? "1" : "0");
-    startProgFlag = sensor1State; // запустить движение по датчику
-    // Serial.println("sensor1 = "+sensor1State?"1":"0");
+    // запустить движение по 1 датчику
+    if (sensor1State == true)
+      move1();
   }
   if (sensor2State != sensor2PastState)
   {
     client.publish(TOPIC_SENSOR2, sensor2State ? "1" : "0");
     // Serial.println("sensor2 = "+sensor2State?"1":"0");
+        // запустить движение по датчику
+    if (sensor2State == true)
+      move2();
   }
   sensor1PastState = sensor1State;
   sensor2PastState = sensor2State;
@@ -304,3 +349,4 @@ void loop()
     Serial.println("End move");
   }
 }
+
