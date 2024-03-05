@@ -21,7 +21,7 @@
 #define DHTPin 4
 
 #define J1_MIN 0
-#define J1_MAX 180
+#define J1_MAX 270
 #define J2_MIN 70
 #define J2_MAX 180
 #define J3_MIN 113
@@ -38,14 +38,14 @@
 #define J5_START 90
 
 /* change it with your ssid-password */
-const char *ssid = "ХХХХХХХХХ";
-const char *password = "ХХХХХХХХХ";
+const char *ssid = "XXXXXX";
+const char *password = "XXXXXX";
 
 // const char *mqtt_server = "mqtt.eclipseprojects.io";
-const char *mqtt_server = "192.168.ХХХХХХХХХ";
+const char *mqtt_server = "192.168.31.XXXXXX";
 const char *mqtt_client_id = "work1";
-const char *mqtt_login = "ХХХХХХХХХ";
-const char *mqtt_password = "ХХХХХХХХХ";
+const char *mqtt_login = "XXXXXX";
+const char *mqtt_password = "XXXXXX";
 /* topics */
 #define TOPIC "work1/#"
 
@@ -61,17 +61,25 @@ PubSubClient client(espClient);
 Servo servo1, servo2, servo3, servo4, servo5;
 boolean sensor1PastState = false;
 boolean sensor2PastState = false;
-boolean startProgFlag = false;
-boolean stopFlag = false;
+volatile boolean startProgFlag = false;
+volatile boolean stopFlag = false;
+
+volatile boolean sensor1Signal = false;
+volatile boolean sensor2Signal = false;
 
 const int MAX_POINTS = 10; // Максимальное количество точек для сохранения
 int savedPointCount = 0;   // количество сохранённых точек
 Point points[MAX_POINTS];  // Массив для хранения точек
-Point currentPoint(J1_START, J2_START, J3_START, J4_START, J5_START, 1000);
-const int stepsCount = 20;
+Point homePoint(J1_START, J2_START, J3_START, J4_START, J5_START, 1000);
+Point currentPoint;
+const int stepsCount = 30;
 
 long pastSentTime = 0;
 DHT dht(DHTPin, DHT11); // Инициализируем DHT
+TaskHandle_t Task1;
+TaskHandle_t Task2;
+void Task1code(void *parameter);
+void Task2code(void *parameter);
 
 void GoToPoint(Point point)
 {
@@ -84,7 +92,7 @@ void GoToPoint(Point point)
 
 void GoToPTP(Point pointStart, Point pointEnd)
 {
-  for (int i = 1; i <= stepsCount; i++)
+  for (int i = 1; i <= stepsCount && (!stopFlag); i++)
   {
     Point tempPoint;
     tempPoint.j1 = pointStart.j1 + (pointEnd.j1 - pointStart.j1) * i / stepsCount;
@@ -93,6 +101,7 @@ void GoToPTP(Point pointStart, Point pointEnd)
     tempPoint.j4 = pointStart.j4 + (pointEnd.j4 - pointStart.j4) * i / stepsCount;
     tempPoint.j5 = pointStart.j5 + (pointEnd.j5 - pointStart.j5) * i / stepsCount;
     GoToPoint(tempPoint);
+    currentPoint = tempPoint;
     delay(pointEnd.time / stepsCount);
   }
 }
@@ -118,16 +127,20 @@ void move()
     GoToPTP(points[i - 1], points[i]);
     Serial.println(points[i].toStrintg());
   }
-  currentPoint = points[savedPointCount - 1];
+  // currentPoint = points[savedPointCount - 1];
+  stopFlag = false;
 }
 
 void move1()
 {
   Serial.println("Start move1");
   Point move1Points[] = {
-      Point(0, 0, 0, 0, 0, 1000),
-      Point(0, 0, 0, 0, 0, 1000)};
-  int pointsSize = 2;
+      Point(0, 127, 167, 90, 90, 1000),
+      Point(180, 127, 167, 90, 90, 3186),
+      Point(92, 106, 180, 90, 90, 2480),
+      Point(0, 106, 180, 90, 90, 2480)
+      };
+  int pointsSize = 4;
 
   if (pointsSize == 0)
     return;
@@ -137,7 +150,7 @@ void move1()
   {
     GoToPTP(move1Points[i - 1], move1Points[i]);
   }
-  currentPoint = points[pointsSize - 1];
+  stopFlag = false;
   Serial.println("End move1");
 }
 
@@ -145,8 +158,12 @@ void move2()
 {
   Serial.println("End move2");
   Point move2Points[] = {
-      Point(0, 0, 0, 0, 0, 1000),
-      Point(0, 0, 0, 0, 0, 1000)};
+      Point(92, 114, 180, 90, 90, 1000),
+      Point(0, 104, 180, 90, 90, 1847),
+      Point(180, 151, 113, 90, 90, 3549),
+      Point(87, 94, 180, 90, 90, 3213),
+      Point(90, 120, 170, 90, 90, 1000)
+      };
   int pointsSize = 2;
 
   if (pointsSize == 0)
@@ -157,7 +174,7 @@ void move2()
   {
     GoToPTP(move2Points[i - 1], move2Points[i]);
   }
-  currentPoint = points[pointsSize - 1];
+  stopFlag = false;
   Serial.println("End move2");
 }
 
@@ -178,7 +195,7 @@ void receivedCallback(char *topic, byte *payload, unsigned int length)
   if (topicStr.indexOf("join/1") >= 1)
   {
     int pos = payloadStr.toInt();
-    currentPoint.j1 = min(max(pos, J1_MIN), J1_MAX); //(int)map(pos, 0, 100, J1_MIN, J1_MAX);
+    currentPoint.j1 = map(min(max(pos, J1_MIN), J1_MAX), 0, 270, 0, 180); //(int)map(pos, 0, 100, J1_MIN, J1_MAX);
     servo1.write(currentPoint.j1);
   }
   else if (topicStr.indexOf("join/2") >= 1)
@@ -217,13 +234,15 @@ void receivedCallback(char *topic, byte *payload, unsigned int length)
     digitalWrite(ledR, LOW);
     if (payloadStr.indexOf("set") >= 0)
     {
-      currentPoint.j5 = 40;
-      servo4.write(currentPoint.j5);
+      // currentPoint.j5 = 40;
+      // servo4.write(currentPoint.j5);
+      sensor1Signal = true;
     }
     else if (payloadStr.indexOf("reset") >= 0)
     {
-      currentPoint.j5 = J5_MAX;
-      servo4.write(currentPoint.j5);
+      // currentPoint.j5 = J5_MAX;
+      // servo4.write(currentPoint.j5);
+      sensor2Signal = true;
     }
     else if (payloadStr.indexOf("stop") >= 0)
     {
@@ -252,7 +271,9 @@ void receivedCallback(char *topic, byte *payload, unsigned int length)
     }
     else if (payloadStr.indexOf("back") >= 0)
     {
-      GoToPoint(points[savedPointCount - 1]);
+      // GoToPoint(points[savedPointCount - 1]);
+      currentPoint = homePoint;
+      GoToPoint(currentPoint);
     }
   }
 }
@@ -321,54 +342,108 @@ void setup()
   /* this receivedCallback function will be invoked
   when client received subscribed topic */
   client.setCallback(receivedCallback);
+  currentPoint = homePoint;
   GoToPoint(currentPoint);
+
+  // Создание задачи 1 на первом ядре
+  xTaskCreatePinnedToCore(
+      Task1code, // функция задачи 1
+      "Task1",   // имя задачи 1
+      10000,     // размер стека задачи 1
+      NULL,      // параметры задачи 1
+      1,         // приоритет задачи 1
+      &Task1,    // дескриптор задачи 1
+      0          // первое ядро (ядра нумеруются с 0)
+  );
+
+  // Создание задачи 2 на втором ядре
+  xTaskCreatePinnedToCore(
+      Task2code, // функция задачи 2
+      "Task2",   // имя задачи 2
+      10000,     // размер стека задачи 2
+      NULL,      // параметры задачи 2
+      1,         // приоритет задачи 2
+      &Task2,    // дескриптор задачи 2
+      1          // второе ядро
+  );
 }
 
 /////////////////////////////////////LOOP////////////////////////////////////////
 void loop()
 {
-  /* if client was disconnected then try to reconnect again */
-  if (!client.connected())
-  {
-    mqttconnect();
-  }
-  client.loop();
+}
 
-  boolean sensor1State = digitalRead(sensor1);
-  boolean sensor2State = digitalRead(sensor2);
-  if (sensor1State != sensor1PastState)
+void Task1code(void *parameter)
+{
+  while (1)
   {
-    client.publish(TOPIC_SENSOR1, sensor1State ? "1" : "0");
-    // запустить движение по 1 датчику
-    // if (sensor1State == true)
-    //   move1();
-  }
-  if (sensor2State != sensor2PastState)
-  {
-    client.publish(TOPIC_SENSOR2, sensor2State ? "1" : "0");
-    // запустить движение по датчику
-    // if (sensor2State == true)
-    //   move2();
-  }
-  sensor1PastState = sensor1State;
-  sensor2PastState = sensor2State;
 
-  if (startProgFlag)
-  {
-    Serial.println("Start move");
-    move();
-    startProgFlag = false;
-    Serial.println("End move");
+    /* if client was disconnected then try to reconnect again */
+    if (!client.connected())
+    {
+      mqttconnect();
+    }
+    client.loop();
+
+    boolean sensor1State = digitalRead(sensor1);
+    boolean sensor2State = digitalRead(sensor2);
+    if (sensor1State != sensor1PastState)
+    {
+      client.publish(TOPIC_SENSOR1, sensor1State ? "1" : "0");
+      // запустить движение по 1 датчику
+      if (sensor1State == true)
+        sensor1Signal = true;
+      //   move1();
+    }
+    if (sensor2State != sensor2PastState)
+    {
+      client.publish(TOPIC_SENSOR2, sensor2State ? "1" : "0");
+      // запустить движение по датчику
+      if (sensor2State == true)
+        sensor2Signal = true;
+      //   move2();
+    }
+    sensor1PastState = sensor1State;
+    sensor2PastState = sensor2State;
+
+    long currentTime = millis();
+    if (currentTime - pastSentTime >= 3000)
+    {
+      pastSentTime = currentTime;
+      float temp = dht.readTemperature();
+      float hum = dht.readHumidity();
+
+      client.publish(TOPIC_SENSOR_TEMP, String(temp).c_str());
+      client.publish(TOPIC_SENSOR_HUMP, String(hum).c_str());
+    }
+    // Serial.println("Task 1 is running on core 0");
+    // vTaskDelay(1000 / portTICK_PERIOD_MS); // Пауза 1 секунда
+    vTaskDelay(10 / portTICK_PERIOD_MS);
   }
+}
 
-  long currentTime = millis();
-  if (currentTime - pastSentTime >= 1000)
+void Task2code(void *parameter)
+{
+  while (1)
   {
-    pastSentTime = currentTime;
-    float temp = dht.readTemperature();
-    float hum = dht.readHumidity();
+    if (sensor1Signal)
+    {
+      move1();
+      sensor1Signal = false;
+    }
+    if (sensor2Signal)
+    {
+      // move2();
+      sensor2Signal = false;
+    }
+    if (startProgFlag)
+    {
+      Serial.println("Start move");
+      move();
+      startProgFlag = false;
+      Serial.println("End move");
+    }
 
-    client.publish(TOPIC_SENSOR_TEMP, String(temp).c_str());
-    client.publish(TOPIC_SENSOR_HUMP, String(hum).c_str());
+    vTaskDelay(10 / portTICK_PERIOD_MS);
   }
 }
