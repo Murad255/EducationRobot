@@ -14,11 +14,9 @@ namespace SensorLogger
 		char SpaceName[30];
 	};
 
-
 	DeviceSetings setings;
 	Preferences prefs; //энергонезависимая память
 	bool sensorLoggerIsBegin = false;
-
 
 	void SaveSetings();
 	void dPrint(String message);

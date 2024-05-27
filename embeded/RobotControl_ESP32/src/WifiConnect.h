@@ -5,7 +5,7 @@
 #include "SensorLogger.h"
 
 // #define DEBUG
-//ssid и пароль точки доступа
+// ssid и пароль точки доступа
 const char *ssidCon = "pass:123456789";
 const char *passwordCon = "123456789";
 
@@ -25,14 +25,15 @@ char *CwifiDeviceName = "";
 using SensorLogger::DeviceSetings;
 WiFiServer server(80);
 int connections = 0;
-void CleanStr(char* str, int len);
+void CleanStr(char *str, int len);
 
-void WiFiStationConnected(WiFiEvent_t event, WiFiEventInfo_t info){
+void WiFiStationConnected(WiFiEvent_t event, WiFiEventInfo_t info)
+{
   connections += 1;
-  #ifdef DEBUG
-    Serial.print("connections: ");
-    Serial.println(connections);
-  #endif
+#ifdef DEBUG
+  Serial.print("connections: ");
+  Serial.println(connections);
+#endif
 }
 
 void connect()
@@ -42,10 +43,10 @@ void connect()
   const byte DNS_PORT = 53;
   String header = "";
 
-  //WiFi.softAPConfig(apIP, apIP, IPAddress(255, 255, 255, 0));
- // WiFi.softAP(ssidCon, passwordCon);
-  // Start access point 
-  WiFi.mode(WIFI_AP);                   
+  // WiFi.softAPConfig(apIP, apIP, IPAddress(255, 255, 255, 0));
+  // WiFi.softAP(ssidCon, passwordCon);
+  // Start access point
+  WiFi.mode(WIFI_AP);
   WiFi.softAP(ssidCon, passwordCon);
   WiFi.onEvent(WiFiStationConnected, ARDUINO_EVENT_WIFI_AP_STACONNECTED);
 
@@ -77,9 +78,9 @@ void connect()
           char c = client.read(); // read a byte, then
                                   // Serial.write(c);        // print it out the serial monitor
           header += c;
-          #ifdef DEBUG
-                Serial.print(c); // print a message out in the serial port
-          #endif
+#ifdef DEBUG
+          Serial.print(c); // print a message out in the serial port
+#endif
           if (c == '\n')
           { // if the byte is a newline character
             // if the current line is blank, you got two newline characters in a row.
@@ -101,16 +102,29 @@ void connect()
                 char *imputOptions = &header[0];
                 str = strtok_r(imputOptions, "?", &imputOptions);
                 imputOptions = strtok_r(imputOptions, "?", &imputOptions);
-                //Serial.println(imputOptions);
+                // Serial.println(imputOptions);
 
                 String options[] = {"", "", "", ""};
                 int iter = 0;
                 while ((str = strtok_r(imputOptions, "&", &imputOptions)) != NULL)
                 {
-                  options[iter++] = str;
+                  String buf = str;
+                  buf.replace("+", " ");
+                  buf.replace("%40", "@");
+                  buf.replace("%23", "#");
+                  buf.replace("%25", "%");
+                  buf.replace("%24", "$");
+                  buf.replace("%28", "(");
+                  buf.replace("%29", ")");
+                  buf.replace("%26", "&");
+                  buf.replace("%3F", "?");
+                  buf.replace("%2F", "/");
+                  buf.replace("%3D", "=");
+
+                  options[iter++] = buf;
                   Serial.println(str);
                 }
-                  Serial.println("options:");
+                Serial.println("options:");
                 for (int i = 0; i < 3; i++)
                 {
                   char *str;
@@ -131,20 +145,19 @@ void connect()
                 wifiPassword = options[1];
                 wifiDeviceName = options[2];
                 worcspaceName = options[3];
-                worcspaceName.replace("%3A",":");
-                worcspaceName.replace("%2F","/");
-                worcspaceName.replace(" HTTP/1.1","");
+                worcspaceName.replace("%3A", ":");
+                worcspaceName.replace("%2F", "/");
+                worcspaceName.replace(" HTTP/1.1", "");
                 CwifiDeviceName = &options[3][0];
-                Serial.println("worcspaceName = "+worcspaceName);
+                Serial.println("worcspaceName = " + worcspaceName);
                 client.println(passwordImputPageSaved);
                 delay(10);
-
               }
               else
               {
-                #ifdef DEBUG
-                      Serial.println("Sent Page"); // print a message out in the serial port
-                #endif
+#ifdef DEBUG
+                Serial.println("Sent Page"); // print a message out in the serial port
+#endif
                 client.println(passwordImputPage2);
               }
 
@@ -169,15 +182,15 @@ void connect()
       {
         // Close the connection
         client.stop();
-        //Serial.println("Client disconnected.");
-        //Serial.println("");
+        // Serial.println("Client disconnected.");
+        // Serial.println("");
         break;
       }
     }
     delay(2);
   }
 
-  //Serial.println("MQTT need.");
+  // Serial.println("MQTT need.");
 }
 
 /// пробует приконектиться по сохранённым настойкам wifi, иначе вызывается connect
@@ -195,32 +208,31 @@ bool connectSetings()
 
   while (WiFi.waitForConnectResult() != WL_CONNECTED)
   {
-    #ifdef DEBUG
-      Serial.println("Not connected");
-    #endif
+#ifdef DEBUG
+    Serial.println("Not connected");
+#endif
     connect();
     SSID = &wifiSsid[0];
     PASS = &wifiPassword[0];
     DeviceName = &wifiDeviceName[0];
-    WorkSpaceName =&worcspaceName[0];
+    WorkSpaceName = &worcspaceName[0];
 
-  Serial.println("Save settings");
-  Serial.println(SSID);
-  Serial.println(PASS);
-  Serial.println(DeviceName);
-  Serial.println(WorkSpaceName);
-  CleanStr(SensorLogger::setings.Ssid,strlen(SensorLogger::setings.Ssid));
-  CleanStr(SensorLogger::setings.Pass,strlen(SensorLogger::setings.Pass));
-  CleanStr(SensorLogger::setings.DeviceName,strlen(SensorLogger::setings.DeviceName));
-  CleanStr(SensorLogger::setings.SpaceName,strlen(SensorLogger::setings.SpaceName));
+    Serial.println("Save settings");
+    Serial.println(SSID);
+    Serial.println(PASS);
+    Serial.println(DeviceName);
+    Serial.println(WorkSpaceName);
+    CleanStr(SensorLogger::setings.Ssid, strlen(SensorLogger::setings.Ssid));
+    CleanStr(SensorLogger::setings.Pass, strlen(SensorLogger::setings.Pass));
+    CleanStr(SensorLogger::setings.DeviceName, strlen(SensorLogger::setings.DeviceName));
+    CleanStr(SensorLogger::setings.SpaceName, strlen(SensorLogger::setings.SpaceName));
 
-  strcat(SensorLogger::setings.Ssid, SSID);
-  strcat(SensorLogger::setings.Pass, PASS);
-  strcat(SensorLogger::setings.DeviceName, DeviceName);
-  strcat(SensorLogger::setings.SpaceName, WorkSpaceName);
-  SensorLogger::SaveSetings();
+    strcat(SensorLogger::setings.Ssid, SSID);
+    strcat(SensorLogger::setings.Pass, PASS);
+    strcat(SensorLogger::setings.DeviceName, DeviceName);
+    strcat(SensorLogger::setings.SpaceName, WorkSpaceName);
+    SensorLogger::SaveSetings();
     WiFi.begin(SSID, PASS);
-
   }
   IPAddress apIP(192, 168, 4, 7);
   DNSServer dnsServer;
@@ -243,9 +255,10 @@ bool connectSetings()
   return true;
 }
 
-
-void CleanStr(char* str, int len){
-  for (int i = 0; i < len; i++){
+void CleanStr(char *str, int len)
+{
+  for (int i = 0; i < len; i++)
+  {
     str[i] = 0;
   }
 }

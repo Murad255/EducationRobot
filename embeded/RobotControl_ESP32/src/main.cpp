@@ -345,6 +345,7 @@ void setup()
   pinMode(sensor2, INPUT);
   pinMode(DHTPin, INPUT);
 
+  // WI-FI connect
   SensorLogger::begin();
   char *SSID = SensorLogger::setings.Ssid;
   char *PASS = SensorLogger::setings.Pass;
@@ -352,7 +353,8 @@ void setup()
   SensorLogger::dPrint(SSID);
   SensorLogger::dPrint("...");
   connectSetings();
-  if (WiFi.waitForConnectResult() != WL_CONNECTED)
+
+  while (WiFi.waitForConnectResult() != WL_CONNECTED)
   {
     SensorLogger::dPrintln("Connecting new");
     connectSetings();
@@ -461,7 +463,7 @@ void Task1code(void *parameter)
     sensor2PastState = sensor2State;
 
     long currentTime = millis();
-    if (currentTime - pastSentTime >= 3000)
+    if (currentTime - pastSentTime >= 1000)
     {
       pastSentTime = currentTime;
       // float temp = dht.readTemperature();
